@@ -1,0 +1,44 @@
+video
+{
+  border-radius: 50%;
+  height: 100px;
+  width: 150px;
+  box-shadow: 0px 0px 5px 5px rgb(247, 226, 226);
+}
+.wrap-videos
+{
+    width: 400px;
+    height: 800px;
+    position: relative;
+}
+.video1
+{
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+.video2
+{
+    position: relative;
+    left: 195px;
+    bottom:30px;
+}
+.video3
+{
+    position: relative;
+    left: 180px;
+}
+.video4
+{
+    position: relative;
+    left: 10px;
+    bottom: 150px;
+    height: 150px !important;
+}
+.video5
+{
+    position: relative;
+    left: 40px;
+    bottom: 120px;
+    
+}

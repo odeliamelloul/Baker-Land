@@ -1,0 +1,46 @@
+.wrapFooter {
+    height: max-content;
+    padding-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .b img{ 
+      min-width: 149px;
+      height: 150px;
+  }
+  .wrapFooter a 
+  {
+     color: rgb(167 ,39 ,138) !important;
+  }
+  .ContactUs{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: rgb(167 ,39 ,138) !important;
+    font-size: 18px !important;
+    font-weight: bold;
+  }
+  .social a{
+    margin-right: 5px;
+    color: rgb(167 ,39 ,138) !important;
+    text-decoration: none !important;
+   }
+  
+   .social{
+    outline: none;
+    width: 75px;
+    justify-content: space-between;
+    margin: 20px auto;
+  
+   }
+   @media only screen and (max-width: 600px) {
+
+    .ContactUs a{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }

@@ -1,0 +1,132 @@
+
+.detailsCard{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    width: max-content;
+    text-align:start;
+  
+  }
+  .details div{
+   margin-right: 13px;
+   font-size: 30px;
+  }
+  .details p{
+    color: rgb(167 39 138) ;
+    margin-left: 15px;
+  }
+
+  .nameOfProduct{
+    
+    color: rgb(204 151 0) !important;  
+    font-size: 2rem !important;
+
+  }
+
+  .details{
+    margin-left: 10px;
+    font-size: 30px;
+    background-color: white;
+    width: 400px;
+    box-shadow: 0px 0px 5px 5px rgb(247 226 226);
+  }
+  .detailsImg,.IngredientsWrap{
+    height: 450px;
+    width: 400px;
+  }
+  .IngredientsWrap{
+    background-color: rgb(247, 241, 241);
+    text-align: center;
+  }
+  .Ingredients{
+    text-align: center;
+    color: rgb(204 151 0);
+  }
+  .ingredientDetails {
+    width: 300px;
+    margin: 0 auto;
+}
+  .icon-arrow{
+    color: rgb(167 39 138) !important;
+    font-size: 40px;
+    font-weight: bold;
+   }
+  .addToBag{
+    color: rgb(167 39 138) !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap !important;
+    flex-direction: column;
+    margin: 0 auto;
+   
+  }
+  .btnAdd {
+    width: 300px;
+    margin: 0 auto;
+    background-color: cornsilk;
+    box-shadow: 0px 0px 5px 5px rgb(247 226 226);
+    border: none !important;
+  }
+  .addOrRemove{
+    color: rgb(167 39 138) !important;
+    display: flex;
+    width: 240px;
+    justify-content: space-evenly;
+    font-size: 20px;
+  }
+ .shareUrl{
+  background-color: transparent;
+  border: none;
+  width: max-content;
+  margin-left: 150px;
+ }
+.copied
+{
+  transition: all .2s linear;
+  background-color: #36393e;
+  color: #fff;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 13px;
+  letter-spacing: -.04em;
+  line-height: 30px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 3px;
+  transform: translate(-20%);
+  white-space: nowrap;
+}
+.fa-share-alt
+{
+  font-size: 30px;
+  color: rgb(167 39 138) !important;
+}
+
+.amountPlusMinus{
+  font-size: 20px !important;
+  color: rgb(167 39 138) !important;
+  border: none;
+}
+.status
+{
+  font-size: 18px !important;
+}
+/* Animatio when add to cart */
+.animImg {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  animation: mymove 3s 1 ;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+  0% {bottom: 300px;right: 200px}
+  50% {bottom: 850px;right: 20px} 
+  100%{bottom: 1300px;right:10px}
+}

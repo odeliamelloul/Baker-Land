@@ -1,0 +1,328 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url("./MarketingScriptInline400.ttf");
+}
+
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+.aboutHr{
+  width: 100vw;
+}
+.App{
+  text-align: center;
+  height: 100%;
+  
+  background-color: #FAF6EE;
+  /* background-image: url("https://thumbs.dreamstime.com/b/marbre-de-qualité-775469.jpg"); */
+  background-size: cover;
+}
+.Catalog
+{
+  padding-bottom: 20px;
+}
+.nav-pagination
+{
+  margin-left: 20px;
+}
+.Catalog,.nav-pagination
+{
+  background-color: rgb(136, 46, 79) !important;
+}
+.nav-pagination
+{
+  margin:20px auto;
+}
+/*     color: rgb(167 39 138) !important; */
+header{
+  font-size: 72px !important;
+  font-weight: bolder;
+  text-shadow: 4px 3px #888,5px 4px #ec83ec !important;
+
+}
+
+nav{
+  background-color: white !important;
+  text-align: center !important;
+}
+a,button,p,label{
+  color: rgb(167 39 138) ;
+  font-size: 20px !important;
+  /* font-weight: 700; */
+}
+.nav-link,.navbar-toggler,.serchIcon,.dropdown-item
+{
+  color: rgb(167,39 ,138) !important;
+}
+li{
+  margin-right: 13px;
+}
+.navbar-expand-lg .navbar-collapse {
+  margin-right:30px !important;
+}
+  
+.container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1000px !important;
+  flex-wrap: wrap !important;
+}
+.footerImg{
+  display: flex;
+  width: 100%;
+ 
+}
+
+.navbar-expand-lg {
+  justify-content: space-between !important;
+}
+
+
+/* SignIn/up */
+.ErrForm{
+    color: #de0000 !important;
+    margin: 0 auto;
+    background-color: rgb(255, 230, 237);
+    width: 400px;
+    height: max-content;
+    padding: 10px;;
+}
+
+.formSign{
+ width: max-content;
+ height: max-content;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: white;
+ box-shadow: 0px 0px 5px 5px rgb(247, 226, 226);
+}
+.formSign input{
+  width: 250px;
+  margin: 0 auto;
+}
+.formSign button{
+  margin-top: 10px !important;
+  width:max-content;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.formSign button:hover{
+background-color: rgb(238, 197, 197);
+}
+.userProfile h2{
+  color: rgb(131, 23, 107);
+}
+.userProfile th{
+  color: rgb(131, 23, 107);
+}
+.userProfile thead th{
+  border: 1px rgb(197, 189, 189) solid ;
+}
+.userProfile td,th{
+ border: 1px rgb(197, 189, 189) solid ;
+ padding: 0 5px;
+}
+.userProfile{
+  width: 80%;
+  margin:  20px auto;
+  justify-content: space-between;
+}
+
+
+
+/* contact us */
+
+/* Products */
+.Products{
+ /* background-color: rgb(247, 233, 208); */
+ margin: 0;
+ margin-bottom: 20px !important;
+}
+/* contactUs signIn signUp */
+h1{
+  font-family: myFirstFont !important;
+  /* font-family: sans-serif !important; */
+  font-size:40px !important;
+  background: -webkit-linear-gradient(rgb(98, 39, 116), rgb(214, 54, 107)) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 70px !important;
+}
+
+@media only screen and (max-width: 991px) {
+
+  .btnDisplay{
+     display: none;
+  }
+}
+/* //category */
+
+.btnDisplay
+{
+  position: absolute;
+  left: 2px;
+  top: 95px;
+  background-color:rgb(255, 255, 255);
+  border:rgb(131, 23, 107) 1px solid;
+  border-radius: 44%;
+}
+
+a{
+  text-decoration: none !important;
+}
+/* Bag icon */
+.container {
+  position: relative; 
+  text-align: center;
+  font-weight: bold;
+}
+.centered-cart-qty
+{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(247, 226, 226);
+}
+
+.logInBtn{
+  background-color: transparent;
+  border: none;
+}
+.bag{
+  width: 100px !important;
+  margin: 0 !important;
+}
+.container{
+      margin-top:0 !important;
+     margin-bottom: 0 !important;
+
+}
+.navbar {
+ padding-top: unset !important;
+ padding-bottom: unset !important;
+}
+.form-control
+{
+  width: 130px!important;
+  margin-right: 5px;
+}
+
+
+.signBtn{
+  border:rgb(131, 23, 107) 1px solid;
+  border-radius: 10%;
+  background-color: transparent;
+}
+.SmallCartBtn{
+  font-size: 15px !important;
+  background-color:rgb(5, 134, 255);
+  font-weight: bold;
+  color: aliceblue !important;
+  border: none !important;
+}
+.btnPay{
+  border:rgb(131, 23, 107) 1px solid;
+  border-radius: 12%;
+  width: 50% !important;
+  background-color: cornsilk;
+}
+
+.btnFree{
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+h4{
+  color: rgb(167 39 138);
+
+}
+.cartModal
+{
+  margin: 0 auto;
+  border:rgb(131, 23, 107) 1px solid;
+  width: 350px;
+  position: absolute;
+  right: 0;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: rgb(255, 244, 248);
+}
+.cartModal>*
+{
+  color: blueviolet !important;
+  font-weight: bolder;
+}
+
+.openCartBtn
+{
+  background-color: transparent;
+  border: none;
+  position: relative;
+  text-align: center;
+}
+
+/* log in modal */
+.LogInModal
+{
+  margin: 0 auto;
+  border:rgb(131, 23, 107) 1px solid;
+  width: 150px;
+  position: absolute;
+  right:150px;
+  height: max-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+}
+
+
+/* pagination */
+.page-link
+{
+  width: 100px !important;
+  margin: 0 auto !important;
+  color: rgb(131, 23, 107) !important;
+  border: rgb(128, 68, 115) 1px solid !important;
+  font-weight: bold;
+}
+.checkList input
+{
+ width: max-content !important;
+ margin-right: 5px;
+ margin-left: 3px;
+}
+.checkList span
+{
+  color: rgb(141, 32, 117) !important;
+}
+.checkList
+{
+  text-align: justify;
+  width: max-content;
+  margin: 10px auto;
+}
+.create-product-btn
+{
+  /* (rgb(98, 39, 116), rgb(214, 54, 107)); */
+  background: -webkit-linear-gradient(rgb(98, 39, 116), rgb(214, 54, 134));
+  border: none;
+  color: rgb(247, 226, 226);
+}
+
+.dropdown-item 
+{
+  font-size: 14px !important;
+  font-weight: bold !important;
+}

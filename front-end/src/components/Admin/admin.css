@@ -1,0 +1,45 @@
+.edit-user-list
+{
+    padding: 10px;
+    width: max-content !important;
+}
+.edit-user-list input
+{
+    width: max-content !important;
+}
+.edit-user-list label
+{
+    margin-left: 5px;
+}
+
+.td-name
+{
+    width: max-content;
+    text-align: center;
+}
+.input-price
+{
+    width: 70px !important;
+    margin: 0 5px !important;
+
+}
+.priceDolar
+{
+ width: max-content;
+ margin: 0 auto;
+}
+.priceDolar label
+{
+    color: black !important;
+    margin-top: 5px;
+}
+.container-edit-delete-btn
+{
+    width: 80px;
+    justify-content: space-between !important;
+    margin: 0 auto;
+}
+.container-edit-delete-btn *
+{
+    width: max-content;
+}

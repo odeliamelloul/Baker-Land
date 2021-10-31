@@ -1,0 +1,45 @@
+.homePage
+{
+    background-color: rgb(136, 46, 79);
+    height: max-content;
+}
+
+.homePage .carousel-item{
+  position: relative;
+}
+.homePage .carousel-item img
+ {
+     left: 300px;
+     width:70vw;
+}
+.homePage img
+{
+    background-repeat: no-repeat;
+    width: 80vw;
+    height: 70vh;
+    background-size:contain;
+    border-bottom-left-radius: 500px;
+}
+.centered {
+    position: relative;
+    font-size: 18px;
+    top: -45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-weight: bold !important;
+    color:rgb(179, 62, 104)!important;
+  
+  }
+  .centeredBtn {
+    position: relative;
+    font-size: 18px;
+    top:-25%;
+    left: 20%; 
+    transform: translate(-50%, -50%);
+    font-weight: bold !important;
+    color:rgb(197, 56, 107)!important;
+    background-color: rgb(247, 226, 226);
+    border-radius:0 30px 30px ;
+    width: max-content;
+    padding: 10px;
+  }

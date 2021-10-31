@@ -1,0 +1,55 @@
+.wrapContactUs{
+    width:450px;
+    height: max-content;
+    margin: 0 auto;
+  }
+  .contactUsIcon a{
+    font-size: 40px !important;
+    height: 70px;
+    width: 70px;
+    border: rgb(185, 98, 156) 2px solid;
+    color: rgb(31, 13, 67) !important;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 5px;
+    line-height: 65px;
+    text-decoration: none;
+   
+  }
+  .contactUsIcon{
+    width: 85px;
+    height: 300px;
+    margin: auto ;
+  }
+  .formContactUs{
+   margin: 3%;
+   width: max-content;
+  }
+  .formContactUs *{
+   margin-top: 5px;
+  }
+  .ContactUs a{
+    text-decoration: none;
+  }
+  .Contact textarea,.Contact button
+  {
+   width: 250px !important;
+   margin: 3% auto !important;
+  }
+  .Contact button
+  {
+    background-color: inherit;
+    border:rgb(185, 98, 156) 2px solid;
+    color: rgb(31, 13, 67) !important;
+    font-weight: bolder;
+  }
+  .Map
+{
+  height: 300px;
+  width: 100%;
+  margin: 0 !important;
+}
+.leaflet-control
+{
+  display: none !important;
+}

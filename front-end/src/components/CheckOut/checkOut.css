@@ -1,0 +1,285 @@
+
+
+.paymentCard
+{
+    width: 100% !important;
+    background-color: white;
+    margin: 20px auto;
+    height: max-content;
+
+}
+.paymentCard input {
+    margin: 5px auto;
+    border-radius: 5px; 
+}
+
+address{
+    margin: 5px 15px !important;
+    width :150px !important;
+}
+p{
+    font-size: 18px !important;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+
+}
+
+.title
+{
+    width: 250px;
+    color: rgb(75, 72, 243);
+    font-weight: bold;
+}
+.tr-head
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+.coupon>*
+{
+  height: 40px;
+}
+.coupon p{
+    line-height: 50px;
+    color: rgb(199 125 83) !important;
+}
+.coupon input{
+   width: 100px;
+   margin: 0 10px;
+}
+.coupon{
+    width:270px;
+    margin: 0 auto;
+}
+.imageVisa
+{
+    width: max-content;
+    margin: 0 auto;
+}
+.profil,.finalPay
+{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(246, 250, 253);
+    line-height: 50px;
+}
+.finalPay
+{
+ border: rgb(15, 12, 191)1px solid;
+}
+input,.form-select-country
+{   border: rgb(228 221 221)1px solid;
+    width: 250px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.discountCoupon
+{
+    height: max-content;
+    width: max-content;
+    margin: 0 auto;
+    justify-content: start;
+
+}
+.order-summary:not(:nth-last-child())
+{
+    text-align: start !important;
+}
+
+.date,.free{
+    font-size: 22px !important;
+}
+
+.date{
+color: rgb(13, 13, 247) !important;
+}
+.free{
+    color:rgba(247, 50, 50, 0.918) !important;
+}
+.estimated
+{
+    width: max-content;
+}
+hr.vertical {
+    border: 0;
+    margin: 0;
+    margin-right: 10px;
+    border-left: 1px solid brown !important;
+    height: 300px;
+    float: left;
+}
+.icon-Checkout{
+    margin: 10px 
+    auto;
+}
+.carouselExampleControls2
+{
+    height: 150px;
+}
+.paymentImgCart
+{
+    box-shadow: 0px 0px 5px 5px rgb(247, 226, 226);
+    border-radius: 12px;
+}
+.carousel-control-next, .carousel-control-prev {
+    margin: auto 0 ;
+    height: max-content;
+    color: darkviolet !important;
+    border-radius: 50%;
+    width: max-content;
+}
+.wrapContent
+{
+    width: 93%;
+    margin: 0 auto !important;
+}
+.rowCarousel {
+    display: inline-block;
+    background: #faf6ee;
+    margin-left: 10px;
+    width: max-content;
+    padding-bottom: 15px;
+}
+.wrap-payment
+{
+    height: max-content;
+    width: max-content;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+#carouselExampleControls3 {
+    position: relative;
+    margin: 0 auto!important;
+    width: 629px;
+    height: 190px;
+}
+.amountItemPay
+{   width: 30px;
+    border-radius:50%;
+    background-color:rgb(217, 233, 255);
+    color: darkviolet;
+    position:relative;
+    left: 70px;
+    top: 24px;
+}
+/* header status */
+
+.headerStatus 
+{
+  padding: 20px;
+  margin-bottom:10px;
+  margin-left:10px;
+}
+
+.statusIndex
+{   
+    border-radius:50%;
+    background-color: #be99ae;
+    color: azure !important;
+    padding: 0 3px;
+    font-size: 14px !important;
+    font-stretch: 200%;
+}
+.notActive span 
+{
+ color: rgba(160, 153, 153, 0.788) !important;
+ font-weight: 200;
+}
+.notActive .statusIndex 
+{
+ background-color: rgba(160, 153, 153, 0.788) !important;
+ color: azure !important;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url("../../MarketingScriptInline400.ttf");
+  }
+
+.headerStatus .active :not(.middle),h4{
+    font-weight: bold !important;
+    font-size: 24px !important;
+ 
+    background: -webkit-linear-gradient(rgb(98, 39, 116), rgb(214, 54, 107));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* row-titel */
+.middle {
+    position: relative;
+    width: max-content;
+    bottom: 5px;
+    padding: 2px;
+  }
+  .list-group-item{
+    height: max-content;
+    width: max-content;
+}
+
+
+/* shipping */
+.shipping table td input 
+{
+  width: 20px !important;
+}
+.shipping table td,.shipping table th
+{
+    border: 1px rgb(197, 189, 189) solid ;
+    padding: 0 5px ;
+    width:150px;
+    height: 50px;
+}
+.shipping,.payment-form,.shipping-adress,#carouselExampleControls3 
+{
+ margin: 0 auto;
+ padding: 20px;
+ background-color: white;
+ box-shadow: 0px 0px 5px 5px rgb(247, 226, 226);
+
+}
+.shipping
+{
+ width: max-content;
+ height: 360px;
+}
+.payment-form ,.shipping-adress{
+    height: 170px ;
+}
+
+.shippingBtn ,.shippingBtn-disabled
+{  
+    margin: 0 auto;
+    width: max-content ;
+    border-radius: 12px;
+    
+}
+.shippingBtn
+{
+    background-color:rgb(217, 233, 255);
+    color: darkviolet;
+    border: rgb(205, 227, 255) 2px solid;
+}
+.shippingBtn-disabled
+{
+    background-color:rgb(151, 151, 151);
+    color: rgb(192, 185, 185);
+}
+.shipping p ,.shipping div
+{
+   font-size: 15px !important;
+   font-weight: bold !important;
+    
+}
+
+.cart-items
+{
+   padding: 20px;
+  height: 130px !important;
+}
+.width-item-order
+{
+    width: 450px !important;
+    margin: 0 auto !important;
+}

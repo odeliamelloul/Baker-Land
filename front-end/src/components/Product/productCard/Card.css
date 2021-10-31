@@ -1,0 +1,77 @@
+
+.addToBag{
+    margin-top: 5px;
+    color: rgb(118, 73, 155) !important;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px !important;
+    flex-wrap: wrap !important;
+   font-size: 15px;
+}
+.card a{
+    font-size: 12px;
+}
+
+.card-img-top{
+    padding: 10px;
+    height: 250px !important;
+    width:220px !important;
+}
+.card{
+    margin-top: 20px;
+    height: 350px;
+    /* border:    rgb(131, 23, 107) 2px solid; */
+}
+.addTocart{
+    background-color: transparent;
+    border-radius: 12%;
+    color: rgb(167 39 138) !important;
+    width: max-content;
+    font-size: 12px;
+    border: transparent;
+    background-color: #FAF6EE;
+    margin: 5px auto;
+}
+label{
+    color: rgb(194, 78, 169) !important;
+    font-size: 15px !important;
+    font-weight:bolder;
+}
+.cardLabel{
+    margin: 0 auto;
+    width: 70%;
+}
+.iconAdd
+{
+    width:"30px" !important;
+    height:"30px" !important;
+    padding-bottom: 5px;
+}
+.freeBtn
+{
+    border: none;
+    background-color: transparent;
+}
+
+.animCard {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top:230px;left: 100px;
+    z-index: 1;
+    animation: moveImg 2s ;
+    animation-fill-mode: forwards; 
+    -webkit-animation-fill-mode: forwards;
+  }
+  @keyframes moveImg {
+    100%{top:-1000px;left:1800px;}
+
+  }
+  .card-name{
+    color: rgb(167 39 138) !important;
+    font-weight: 700;
+    width:200px;
+    margin:  auto;
+
+  }
+  
