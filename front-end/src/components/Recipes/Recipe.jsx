@@ -45,7 +45,7 @@ const addRecipeToBook=(id)=>
              <div  className="wrapRecipe">
                  <h2 className="headerR">{recipe.name}</h2>
                  <div className="d-flex wrapHeader"> 
-                  <img width="630px" height="inherit" style={{ objectFit:" cover"}} src={recipe.image} alt="" />
+                  <img className="recipe-image"  src={recipe.image} alt="" />
                   <div className="d-flex flex-column infoR">
                     <div className="description">{recipe.description}</div>
 
@@ -85,7 +85,7 @@ const addRecipeToBook=(id)=>
                         <h2 className="headerR"> ingredients:  </h2>
                         <ul >{recipe.ingredients===undefined?<Loader/>: recipe.ingredients.map((item)=> <li>{item}</li>)} </ul>  
                      </div>    
-                       {/* <IngModal className="IngModal" open={showModal} toShop={recipe.toShop}/> */}
+                       <IngModal className="IngModal" open={showModal} toShop={recipe.toShop}/>
                  </div>
                  <div>
                  <div className="steps">

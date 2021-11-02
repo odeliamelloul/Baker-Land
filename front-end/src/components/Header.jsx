@@ -11,9 +11,10 @@ import { Route } from "react-router";
 
 function Header(props)
 {
-   const [searchTerm, setSearchTerm] = useState("")
+
    const [showSmallCart, setShowSmallCart] = useState(false)
    const [classLogIn, setClassLogIn] = useState("d-none")
+   const [collapse, setCollapse] = useState("d-none")
    const [classModal, setClassModal] = useState("d-none")
    
    const dispatch = useDispatch()
@@ -63,11 +64,11 @@ function Header(props)
               <div  className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav  navbar-collapse justify-content-center  me-auto mb-2 mb-lg-0">
                    
-                  <li className="nav-item ">
-                    <Link className="nav-link active" aria-current="page" to={{pathname:"/"}}> Home</Link>
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="/"> Home</a>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page"  to={{pathname:"/Catalog"}}>Catalog</Link>
+                    <a className="nav-link active" aria-current="page"  href="/Catalog">Catalog</a>
                   </li>
                  
 
@@ -77,7 +78,7 @@ function Header(props)
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a className="dropdown-item" href="/Easy">Easy</a></li>
-                      <li><a className="dropdown-item" href="Chef-Recipe">Chef-Recipe</a></li>
+                      <li><a className="dropdown-item" href="/Chef-Recipe">Chef-Recipe</a></li>
                       <li><a className="dropdown-item" href="/Pantry"> according to your pantry</a></li>  
                       <li><hr className="dropdown-divider"/></li>
                       <li><a className="dropdown-item" href={
@@ -92,9 +93,9 @@ function Header(props)
                    <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/ContactUs">ContactUs</a>
                    </li>
-                   <li className="nav-item">
+                   {/* <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/Blog">Blog</a>
-                   </li>
+                   </li> */}
                 </ul>
                 {userInfo && userInfo.isAdmin &&
                 (<div className="dropdown ml-4">
@@ -125,13 +126,13 @@ function Header(props)
                   </ul> 
                 }
               </div>    
-                 <NavLink to="/Bag" className="nav-link container bag">
-                          <button className= "openCartBtn" onMouseOver={handleShowModalSmallCart}>
+              </div> 
+                 <a href="/Bag" className="container bag">
+                          <button className= "openCartBtn" onClick={handleCloseModalSmallCart} onMouseOver={handleShowModalSmallCart}>
                             <img src="https://img.icons8.com/83176B/ios-filled/40/shopping-bag.png"/>
                             <p className="centered-cart-qty">{cartItems.map((item)=>item.qty).reduce((prev,next)=>prev+next,0)}</p>
                           </button>
-                  </NavLink>      
-              </div> 
+                  </a>      
             </div>
     
           </nav>

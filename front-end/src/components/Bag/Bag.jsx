@@ -30,27 +30,26 @@ function Bag(props) {
     let sum=Math.round(cartItems.map((item)=>item.price*item.qty).reduce((prev,next)=>prev+next,0))
     return ( 
        
-        <div> 
+        <div className="Cart"> 
              <HeaderStatus/>
              { cartItems.length===0?
              <div className ="bg-light">
                  <p>your shoping Cart is Empty </p>
                  <Link to="/Catalog">Go to Shop page &#8608;</Link>
              </div>:
-            <div className=" d-flex  wrapCart">
+            <div className=" d-flex flex-column wrapCart">
             <div className="d-flex flex-column wrapDetails" >
-              <div className="cart-header">
+              {/* <div className="cart-header">
                   <div className="d-flex headerItem">
                 <b>Weight</b>
                 <b>Price</b>
                 <b>Quantity</b>
                 <b>Total</b>
                 </div>
-              </div>
+              </div> */}
                {cartItems.map((item)=><BagItem  product={item}/>)}
             </div>
            <div className="summary d-flex flex-column" >
-             <h1>Order Summary</h1>
              <h4>Total: {sum}$</h4>
              {openModal && <BeforePayement openModal={openModal} />}
              {openModal===false && <Link to={{pathname:"/Shipping" ,state:{sum}}} className="payCartBtn">Checout securely Now </Link>}

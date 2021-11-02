@@ -103,9 +103,10 @@ function ProductEditScreen ({match,history})
             <label>weight</label>
             <input  type="text" value={weight} onChange={(e)=>setWeight(e.target.value)} placeholder="enter weight" />
             <select name="" id="" onChange={(e)=>setWeight(weight+e.target.value)}>
-                <option value="ml">ml</option>
-                <option value="kg">kg</option>
                 <option value="gram">gram</option>
+                <option value="kg">kg</option>
+                <option value="ml">ml</option>
+                <option value="L">Liter</option>
             </select>
             <label>Image</label>
             <input  type="text" value={image} onChange={(e)=>setImage(e.target.value)} placeholder="enter Image url" />

@@ -56,7 +56,8 @@ const CarouselBookRecipe = () => {
                added recipe to your book from <a href="/Easy">recipes page</a></p>
             </div>
              :
-            <Carousel  className="book-recipe-carousel" id="book-recipe-carousel">
+             <>
+            <Carousel  id="book-recipe-carousel-md">
               <div className="container-fluid">{
                 NewRecipe.map(( row,index ) => 
                 <div  className={index === 0 ? "carousel-item active" : "carousel-item"}>
@@ -64,13 +65,29 @@ const CarouselBookRecipe = () => {
                     <div className="row rowCarousel">
                       <div className="col-3 img-center-vertical">
                         <Link  to={{pathname:`/Recipe/${item.name.replaceAll(" ","-")}`}}>
-                            <img width="450px" height="500px" src={item.image}/>
+                            <img width="400px" height="450px" src={item.image}/>
                             <h6 className=" book-name-recipe">{item.name}</h6>
                         </Link>
                      </div>
                 </div>)}</div> )} 
               </div>
-            </Carousel>}
+            </Carousel>
+            <Carousel id="book-recipe-carousel-sm">
+            <div className="container-fluid">{
+                myRecipe.map(( item,index ) => 
+                  <div  className={index === 0 ? "carousel-item active" : "carousel-item"}>
+                    <div className=" rowCarousel">
+                      <div className="col-3 img-center-vertical">
+                        <Link  to={{pathname:`/Recipe/${item.name.replaceAll(" ","-")}`}}>
+                            <img width="450px" height="500px" src={item.image}/>
+                            <h6 className=" book-name-recipe">{item.name}</h6>
+                        </Link>
+                     </div>
+                     </div>
+                </div> )} 
+              </div>
+            </Carousel>
+            </>}
         </>
     )
 }

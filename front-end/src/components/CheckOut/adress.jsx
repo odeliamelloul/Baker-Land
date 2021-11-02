@@ -146,6 +146,7 @@ const SaveChange = () => {
 
           <div className=" d-flex flex-column"> 
             <input
+              className="adress"
               onChange={postCodeChange}
               ref={postCode}
               placeholder="PostCode"

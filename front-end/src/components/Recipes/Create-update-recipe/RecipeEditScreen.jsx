@@ -22,7 +22,7 @@ const RecipeEditScreen = ({match,history}) => {
     const [Tip, setTip] = useState("")
     const [description,setDescription] = useState([])
     const [category, setCategory] = useState('')
-    const [ingName, setIngName] = useState("")
+
     
 
     const dispatch = useDispatch()
@@ -90,7 +90,9 @@ const RecipeEditScreen = ({match,history}) => {
         setCategory(e.target.value)
       };
 
-      const getName=(name)=>{setIngName(name)}
+      const getName=(name)=>{
+      setToShop([...toShop,name.toLowerCase()])
+      }
 
       const addIngredients=(newIng)=>
       {

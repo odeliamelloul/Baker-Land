@@ -197,7 +197,7 @@ a{
   border: none;
 }
 .bag{
-  width: 100px !important;
+  width: 50px !important;
   margin: 0 !important;
 }
 .container{
@@ -325,4 +325,36 @@ h4{
 {
   font-size: 14px !important;
   font-weight: bold !important;
+}
+.search-Box
+{
+  display: flex;
+}
+.container-fluid
+{
+  width: 90vw !important;
+}
+
+@media only screen and (max-width: 580px) { 
+  .search-Box
+  {
+    display: none !important;
+  }
+  .cartModal
+  {
+    display: none !important;
+  }
+  .container-fluid
+  {
+    width: 100vw;
+    background-color: white;
+  }
+  .navbar img
+  {
+    z-index: 2;
+    margin-left: 30%;
+  }
+  .centered-cart-qty {
+    left: 68%;
+  }
 }

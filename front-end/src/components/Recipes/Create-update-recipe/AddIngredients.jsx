@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { Modal, Button, Table } from "react-bootstrap";
-
+import ingredients from '../../../ingredients';
 
 function AddIngredients ({getName,addIngredients}) {
     const [ingName, setIngName] = useState("")
@@ -49,6 +49,7 @@ const addIng=()=>
             <Table>
                 
                 <tbody>
+                    <tr>
                     <td>
                     <input  type="text" value={ingQTy} onChange={(e)=>setIngQTy(e.target.value)} placeholder="quantity" />
                     <select  name="" id="" onChange={(e)=>setIngType(e.target.value)}>
@@ -67,8 +68,12 @@ const addIng=()=>
                     </select>
                     </td>
                     <td>
-                      <input type="text" value={ingName} onChange={(e)=>setIngName(e.target.value)} placeholder="name"/>
+                      <input list="brow"  onChange={(e)=>setIngName(e.target.value)} placeholder="name"/>
+                            <datalist id="brow" >
+                             {ingredients.map((el)=><option>{el.name}</option>)}
+                            </datalist>  
                     </td>
+                </tr>
                 </tbody>
             </Table> 
            <button onClick={addIng}>Added</button>

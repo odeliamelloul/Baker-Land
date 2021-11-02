@@ -1,16 +1,31 @@
 import React, {useRef,useState,useEffect} from  'react'
 import ingredients from '../../ingredients'
-import AllRecipes from "../../AllRecipes"
 import { Link } from "react-router-dom"
-
 import Recipe from './Recipe'
+import { useDispatch, useSelector } from 'react-redux'
+import { listRecipes } from '../../actions/recipeAction'
 
 function Pantry() {
 const itemEls = useRef([])
 const [chooseArr, setChooseArr] = useState([])
-const [ingRecipe, setIngRecipe] = useState(AllRecipes.map(Recipe=>({ing:Recipe.toShop,id:Recipe.id})))
 const [matchRecipe, setMatchRecipe] = useState([])
 const [flag, setFlag] = useState(false)
+
+
+const recipesList=useSelector(state=>state.recipesList)
+const{loading,error,recipes}=recipesList
+let ingRecipe=[]
+
+const dispatch = useDispatch()
+useEffect(() => {
+     dispatch(listRecipes())
+  }, [loading])
+   
+  if(recipes && recipes.length>0)
+  {
+      console.log(recipes)
+    ingRecipe=recipes.map(Recipe=>({ing:Recipe.toShop,id:Recipe._id}))
+  }
 
     const addToRef=(el)=>
     {
@@ -20,6 +35,7 @@ const [flag, setFlag] = useState(false)
 
     const addNewIng=(id,ingName)=>
     {
+
         // remove on twice click
         if(chooseArr.includes(ingName))
         {
@@ -29,7 +45,7 @@ const [flag, setFlag] = useState(false)
         }
         else{
             itemEls.current[id].style.color="white"
-            itemEls.current[id].style.backgroundColor="rgb(199 105 178)"
+            itemEls.current[id].style.backgroundColor="#e8b4dc"
             setChooseArr([...chooseArr,ingName])
         }   
     }
@@ -45,7 +61,7 @@ const [flag, setFlag] = useState(false)
             console.log(matched)
             if(matched) 
             findRecipe=[...findRecipe,item.id]
-     
+
         });
        setMatchRecipe(findRecipe);
     }
@@ -56,7 +72,10 @@ const [flag, setFlag] = useState(false)
                     <p>Click on the products you have so we can show you match recipes </p>
                     <div className="pantry d-flex flex-wrap">
                         {
-                            ingredients.map((ing,index)=><button onClick={()=>addNewIng(index,ing.IngName)} ref={addToRef} id={index} className="ing-btn-pantry">{ing.IngName}</button>)
+                            ingredients.map((ing,index)=>
+                        <button onClick={()=>addNewIng(index,ing.name)} ref={addToRef} id={index} className="ing-btn-pantry"><img src={ing.image} alt="" />
+                            <p>{ing.name}</p>
+                        </button>)
                         }
                     </div>
                     <button className="btn-check-recipe" onClick={showRecipes}>Check matched Recipes</button>
@@ -67,11 +86,11 @@ const [flag, setFlag] = useState(false)
                    
                     <div className="d-flex flex-wrap wrapEasy ">
                     { matchRecipe.map((idRecipe)=>
-                            AllRecipes.map((item)=>
-                            { if(item.id===idRecipe)
-                                return (<Link  className="matched-recipe" to={{pathname:`/Recipe/${item.RecipeName.replaceAll(" ","-")}`}}>
-                                        <img width="300px" height="169px" src={item.img} alt="" />
-                                        <h5  className="nameRecipes" >{item.RecipeName}</h5> 
+                            recipes.map((item)=>
+                            { if(item._id===idRecipe)
+                                return (<Link  className="matched-recipe" to={{pathname:`/Recipe/${item.name.replaceAll(" ","-")}`}}>
+                                        <img width="300px" height="169px" src={item.image} alt="" />
+                                        <h5  className="nameRecipes" >{item.name}</h5> 
                                         </Link>)
                             })
                         )}

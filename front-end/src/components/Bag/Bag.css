@@ -1,9 +1,13 @@
+.Cart
+{
+  background-color: rgb(136, 46, 79) !important;
+}
 .cartItems
 {
     
   min-height: 160px;
   max-height: max-content;
-  width: 500px;
+  width: 600px;
   margin: 10px auto;
   background-color: white !important;
   border-top: rgb(170, 30, 123) 1px solid;
@@ -11,13 +15,13 @@
 
 }
 .cartItems img{
-    width: 100px;
-    height: 90px;  
+    width: 170px;
+    height:75%;  
 }
 .payCartBtn
 {
   color: white!important;
-  background-color:rgb(170, 30,123);
+  background-color: rgb(169 79 112);
   font-weight: 800;
 }
 .itemDtails{
@@ -72,18 +76,20 @@
   margin: 0 !important;
 }
 
-.DetailsItem>*
+.DetailsItem>*:not(.btn)
 {
   margin-left: 40px;
   margin-top: 15px;
   width: 40px;
 }
+
 .DetailsItem
 {
   max-width: max-content;
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
+  
 }
 .headerItem
 {
@@ -103,10 +109,10 @@
 .summary {
  /* justify-content: right; */
   border: darkmagenta 1px solid;
-  width: 300px;
+  width: 280px;
   height: max-content;
-  /* margin-right: 0; */
-  margin-left: 30px !important;
+  margin: 0 auto;
+ 
 }
 .headerItem b
 {
@@ -156,10 +162,8 @@ span{
   font-size: 14px;
 }
 .wrapCart {
-  width: 70%;
-  margin-left: 30%;
-   justify-content: space-evenly;
-   flex-wrap: wrap;
+  width:max-content;
+  margin: 0 auto ;
 }
 
 header
@@ -182,12 +186,31 @@ header
  {
    display: none;
  }
- .wrapCart {
+
+ /* .wrapCart {
    width: 100%;
    margin: 0 auto ;
    justify-content: space-evenly;
    flex-wrap: wrap;
-}
+} */
   
+}
+@media only screen and (max-width: 560px)  {
+  .cartItems
+  {
+    margin: 0 auto !important;
+   width:100vw;
+  }
+  .cartItems a
+  {width: 50vw;}
+ .DetailsItem
+ {
+   margin-top:0px;
+   width: 50vw;
+ }
+ .summary {
+   width: 100vw;
+   margin: 0;
+ }
 }
 

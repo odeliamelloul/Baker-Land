@@ -22,8 +22,8 @@ function IngModal(props) {
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
-
-    const arrToShop=products.filter((item)=> props.toShop.includes(item.name))
+    
+    const arrToShop=products.filter((item)=> props.toShop.includes(item.name.toLowerCase()))
     console.log(products)
     console.log(props.toShop)
  
@@ -64,7 +64,7 @@ function IngModal(props) {
 
     return (
       <div>
-      <button style={{width:"max-content"}} onClick={()=>handleShow()} className="btnRecipes openModalBtn">add cake's ingredients to  <img src="https://img.icons8.com/fluency/32/000000/shopping-cart.png"/></button>
+      <button style={{width:"max-content"}} onClick={()=>handleShow()} className="btnRecipes openModalBtn">add ingredients to  <img src="https://img.icons8.com/fluency/32/000000/shopping-cart.png"/></button>
 
       <Modal show={show}>
             <Modal.Header closeButton onClick={()=>handleClose()} >

@@ -72,38 +72,36 @@ function ProductDetails (props) {
 
   return (
    
-    <div className="detailsCard d-flex flex-wrap ">
-
-      <Carousel id="carouselExampleControls6" className="w-100">
-        <div className="carousel-item active">
-            <img
-              src={product.image}
-              className="detailsImg"
-              alt=""
-            />
-        </div>
-        <div className="carousel-item IngredientsWrap ">
-          <h2 className=" Ingredients">Description: </h2>
-          <p className="ingredientDetails">
-            {product.description}
-          </p>
-        </div>
-      </Carousel>
-
+    <div className="detailsCard  ">
+      
+      <div >
+        <img src={product.image} className="detailsImg" alt=""/>
+      </div>      
       <div className="details">
         <div>
-          <p className="nameOfProduct">{product.name}</p>
+          <div className="d-flex">
+             <p className="nameOfProduct">{product.name}</p>
+              <button className="shareUrl" onClick={itsCopied}>
+              <CopyToClipboard text={url}>
+                <img src={copiedSrc} />
+              </CopyToClipboard>
+            </button>
+               {shareCopied && <span className="copied">Copied!</span>}
+            </div>
+         
           <p>Price: {product.price}$</p>
           <p><i class="fa fa-balance-scale"></i> {product.weight}</p>
-
+          
           <div className="addToBag">
+           {product.description!==""&& <p>description: {product.description}</p>}
             <p >status:{product.countInStock>0?'In Stock':'Out Of Stock'}</p>
             <div className="addOrRemove">
               <p>quantity:</p>
               <i className="fa fa-plus" onClick={()=>addProduct()} ></i>
               <span className="amountPlusMinus">{amount}</span>
               <i className="fa fa-minus" onClick={()=>removeProduct()}></i>
-            </div>
+            </div >
+            
             {isAdd && (
               <img className="animImg" src={product.image} alt="" />
             )}
@@ -116,12 +114,7 @@ function ProductDetails (props) {
             <StarAnimation />
           </div>
         </div>
-        <button className="shareUrl" onClick={itsCopied}>
-          <CopyToClipboard text={url}>
-            <img src={copiedSrc} />
-          </CopyToClipboard>
-        </button>
-        {shareCopied && <span className="copied">Copied!</span>}
+       
       </div>
     </div>
   );

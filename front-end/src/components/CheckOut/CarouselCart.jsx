@@ -9,12 +9,12 @@ const CarouselCart = () => {
 
         
         let myCart=cart.cartItems
-        let rest=myCart.length%4
+        let rest=myCart.length%3
 
         for (let j=0;j<myCart.length-rest;j++)
         {
-          NewCart.push([myCart[j],myCart[j+1],myCart[j+2],myCart[j+3]])
-            j+=3
+          NewCart.push([myCart[j],myCart[j+1],myCart[j+2]])
+            j+=2
         }
         if(rest!==0){
           let element=[]

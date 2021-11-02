@@ -152,7 +152,11 @@ hr.vertical {
     position: relative;
     margin: 0 auto!important;
     width: 629px;
-    height: 190px;
+    height: 180px;
+}
+#carouselExampleControls3 .carousel-item
+{
+    width: 550px;
 }
 .amountItemPay
 {   width: 30px;
@@ -165,7 +169,7 @@ hr.vertical {
 }
 /* header status */
 
-.headerStatus 
+.headerStatus-md 
 {
   padding: 20px;
   margin-bottom:10px;
@@ -196,15 +200,18 @@ hr.vertical {
     src: url("../../MarketingScriptInline400.ttf");
   }
 
-.headerStatus .active :not(.middle),h4{
+.headerStatus-sm>h1 ,.headerStatus-md>.active :not(.middle),h4{
     font-weight: bold !important;
-    font-size: 24px !important;
+    font-size: 24px;
  
-    background: -webkit-linear-gradient(rgb(98, 39, 116), rgb(214, 54, 107));
+    background: -webkit-linear-gradient(rgb(192, 152, 204), rgb(214, 54, 107));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.headerStatus-sm
+{
+    display: none;
+}
 
 /* row-titel */
 .middle {
@@ -231,9 +238,9 @@ hr.vertical {
     width:150px;
     height: 50px;
 }
-.shipping,.payment-form,.shipping-adress,#carouselExampleControls3 
+.shipping,.payment-form,.shipping-adress,#carouselExampleControls3
 {
- margin: 0 auto;
+ /* margin: 0 auto; */
  padding: 20px;
  background-color: white;
  box-shadow: 0px 0px 5px 5px rgb(247, 226, 226);
@@ -245,9 +252,14 @@ hr.vertical {
  height: 360px;
 }
 .payment-form ,.shipping-adress{
-    height: 170px ;
+    height: 180px ;
 }
-
+.payment-form {
+    width: 40% ;
+}
+.shipping-adress{
+        width: 60% ;
+}
 .shippingBtn ,.shippingBtn-disabled
 {  
     margin: 0 auto;
@@ -280,6 +292,128 @@ hr.vertical {
 }
 .width-item-order
 {
-    width: 450px !important;
+    width: 450px ;
     margin: 0 auto !important;
+}
+
+@media only screen and (max-width: 589px) {
+        .width-item-order
+        {
+            width: 100vw !important;
+            margin: 0 !important;
+        }
+        .adress, .form-select-country
+        {
+            width: 80vw;
+        }
+       
+        .headerStatus-md
+        {
+            display: none;
+        }
+        .headerStatus-sm
+        {
+            display: block;
+        }
+        .headerStatus-sm span
+        { 
+            font-size: 30px!important;
+        }
+        .shipping
+        {
+            width :100vw !important;
+            height: max-content;
+        }
+        .shipping>table>* {
+            font-size: 14px;
+        };
+        .ErrForm
+        {
+            width: 70vw;
+        }
+        .wrap-payment
+        {
+           width :100vw !important;
+           flex-wrap: wrap;
+        }
+
+        .form-check{
+            width: max-content;
+            margin: 0 auto;
+        }
+        .payment-shipping
+        {
+            width: 100vw;
+            flex-wrap: wrap !important;
+            height: max-content;
+        }       
+                .payment-form
+                {
+                width: 100vw;
+                height: max-content;
+                }
+                .shipping-adress
+                {
+                    width: 100vw;
+                    margin-bottom: 5px;
+                }
+
+                #carouselExampleControls3
+                {
+                    margin: 0 auto;
+                    width:100vw !important;
+                }
+                .paymentImgCart
+                {
+                    width: 19vw;
+                   height: 20vw;
+                }
+
+                        #carouselExampleControls3 .carousel-item {
+                            width:80vw;
+                        }
+}
+
+  @media only screen and (min-width: 589px) and (max-width:1189px) {
+      
+    .wrap-payment
+    {
+       width :500px !important;
+       flex-wrap: wrap;
+    }
+    .payment-shipping
+    {
+        flex-wrap: wrap;
+    }
+    .payment-form,.shipping-adress,#carouselExampleControls3
+    {
+        margin: 0 auto !important;
+      width: 500px;
+    }
+   .carousel-item
+    {
+        width:400px !important;
+        margin: 0 auto;
+    }
+    /* #carouselExampleControls3
+    {
+        width :500px !important;
+    } */
+}
+@media only screen and (max-width: 1277px) {
+
+  .shipping:not(.width-item-order)
+  {
+      width: 500px;
+      margin:0 auto;
+  }
+
+}
+@media only screen and (max-width: 448px) {
+
+    .amountItemPay
+  {
+   left: 10vw;
+  }
+
 }

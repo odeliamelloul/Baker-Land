@@ -16,7 +16,7 @@ const SearchBox = ({history}) => {
       }
 
     return (
-    <form  onSubmit={submitHandler}  className="d-flex">
+    <form  onSubmit={submitHandler}  className="search-Box">
         <input  onChange={(e)=>setKeyWord(e.target.value)}  className="form-control" type="Search"  placeholder="Search" aria-label="Search"/>
            <button type='submit' className="fa fa-search" style={{border:"none",backgroundColor:"transparent"}} ></button> 
     </form>

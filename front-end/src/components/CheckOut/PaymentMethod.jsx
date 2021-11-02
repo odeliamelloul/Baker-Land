@@ -26,18 +26,18 @@ const PaymentMethod = ({history}) => {
     <>
     <HeaderStatus/>
     
-  <div className="d-flex wrap-payment">
+  <div className="d-flex  wrap-payment">
     <div className="d-flex-column " >
 
-          <div className="d-flex" >
-            <div className="shipping-adress">
+          <div className="d-flex payment-shipping" >
+            <div className="shipping-adress ">
                     <h1>Shipping</h1>
                     <p>
                         <strong>Adress:</strong>&nbsp; 
                         {cart.shippingAddress.address},&nbsp; 
                         {cart.shippingAddress.city},&nbsp;
-                        {cart.shippingAddress.postalCode},&nbsp;
-                        {cart.shippingAddress.country},
+                        {cart.shippingAddress.postalCode},
+                        {cart.shippingAddress.country}
                         
                     </p>
             </div>
@@ -68,7 +68,7 @@ const PaymentMethod = ({history}) => {
 
               </Form>
             </div>
-         <div className="d-flex">   
+         <div >   
            <CarouselCart/>
         </div>
       </div>

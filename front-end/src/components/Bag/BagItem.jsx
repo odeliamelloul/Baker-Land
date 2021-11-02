@@ -48,7 +48,7 @@ const dispatch = useDispatch()
     return (
        
       <div className="d-flex cartItems"> 
-           <Link   to={{pathname:`/Catalog/${product.name.replaceAll(" ","-")}`}}>
+           <Link   to={{pathname:`/Catalog/${product.id}`}}>
             <b>{product.name}</b>
             <img src={product.image}/>
            </Link>
@@ -62,13 +62,13 @@ const dispatch = useDispatch()
                  <button className="minus" onClick={removeProdct}>-</button>
                 </p>
                   <p>{product.price*amount}$</p> 
-
-                <div className=" d-flex flex-column btn">
-                <button onClick={changeSrc}>
+               <button className=" btn" onClick={()=>{dispatch(removeFromCart(product.id))}}><img src="https://img.icons8.com/external-icongeek26-outline-gradient-icongeek26/32/000000/external-bin-city-life-icongeek26-outline-gradient-icongeek26.png"/></button>
+                <div >
+                {/* <button onClick={changeSrc}>
                     <img  src={favoriteSrc}/> 
-                </button>    
+                </button>     */}
 
-                 <button  onClick={()=>{dispatch(removeFromCart(product.id))}}>delete</button>
+                
                </div>           
              </div>      
 
@@ -77,15 +77,7 @@ const dispatch = useDispatch()
     )
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     bag: state.cartReducer.bag,
-//   }}
 
-//   const mapDispatchToProps = (dispatch) => {
-//   return {updateCart:()=>dispatch(updateCart()),
-//           DeleteProduct:()=>dispatch(DeleteProduct()) }
-// } 
 
 export default BagItem 
 

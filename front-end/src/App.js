@@ -48,7 +48,7 @@ class App extends React.Component{
        <Router>
             <Header />  
               <Switch>
-                <Route  exact path="/" component={HomePage} />
+                <Route  exact path="/"  component={HomePage} />
                 <Route  exact path="/Catalog" component={Catalog}/>
                 <Route  exact path="/Search/:keyword" component={Catalog}/>
                 <Route  exact path="/Search/:category" component={Catalog}/>

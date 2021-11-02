@@ -41,13 +41,14 @@ function ShippingMethod({getSumShipping,sum}) {
       <>
           <img src="https://img.icons8.com/ultraviolet/40/000000/delivery--v2.png"/>
           <table className="d-flex flex-column mt-4 ">
+  
+
+            <tbody>          
             <thead>
               <th>Shipping Method</th>
               <th>Estimated to be delivered:</th>
               <th>Free-shipping</th>
             </thead>
-
-            <tbody>
               <tr>
                 <td>
                 

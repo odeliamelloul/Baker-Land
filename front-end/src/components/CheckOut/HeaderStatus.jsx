@@ -3,7 +3,7 @@ import './checkOut.css'
 function HeaderStatus() {
     
     const pathName = window.location.pathname;
-    const StatusArr=[["/Bag","cart"],["/Shipping","Shipping adress"],["/PaymentMethod","Payment"],["order","Order Complete"]]
+    const StatusArr=[["/Bag","Cart"],["/Shipping","Adress"],["/PaymentMethod","Payment"],["order","Completed"]]
     
     const [ValueActive, setValueActive] = useState([])
 
@@ -25,19 +25,28 @@ function HeaderStatus() {
     
 
     return (
-        
-        <div className="headerStatus">
+        <>
+        <div className="headerStatus-md">
             {StatusArr.map((item,index)=>
-                { 
-                 return(
-                 <span className={`${ ValueActive.includes(index)?  "active": "notActive"}`}> 
+                
+                 <span className={ValueActive.includes(index)?  "active": "notActive"}> 
                     <span className="statusValue ">{item[1]}</span>
-                    {index<StatusArr.length-1 && <span className="middle" > ____ </span>}
+                    {index<StatusArr.length-1 && <span className="middle" >__</span>}
                  </span>
                  )
-                })
+                }
+
+        </div>          
+        <div className="headerStatus-sm">
+            {StatusArr.map((item,index)=>
+               StatusArr[index][0]===pathName &&
+                 <h1> 
+                    <span className="statusValue ">{item[1]}</span>
+                 </h1>
+                 )
             }
-        </div>
+            </div>
+        </>
     )
 }
 

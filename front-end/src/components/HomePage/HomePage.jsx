@@ -1,71 +1,124 @@
-import React from "react"
+import React,{useEffect,useState} from "react"
 import { Link } from "react-router-dom"
-import Carousel from "../Carousel"
-import Map from "../Map"
-import '../../baking-video/video.css'
 import './homePage.css'
 import video1 from '../../baking-video/video1.mp4'
 import video2 from '../../baking-video/video2.mp4'
 import video3 from '../../baking-video/video3.mp4'
 import video4 from '../../baking-video/video4.mp4'
 import video5 from '../../baking-video/video5.mp4'
-class HomePage extends React.Component
-{
-    constructor()
-    {
-        super()
-         this.state={ }
-    }
+import video6 from '../../baking-video/video6.mp4'
+import { useDispatch ,useSelector } from "react-redux"
+import { listProducts } from "../../actions/productActions"
+import Loader from "../Loader"
+import Carousel from '../Carousel'
+function HomePage(){
 
-        render(){
-       
-        return(
-          <div className="homePage d-flex">
-          <div className="homePage d-flex flex-column">
-           <div className="d-flex flex-column wrap-videos">
-                <video className="video1" loop controls autoPlay>
-                        <source src={video1} type="video/mp4"/>
-                    </video>            
-                <video className="video2" loop controls autoPlay>
-                        <source src={video2} type="video/mp4"/>
-                    </video>            
-                <video className="video3" loop controls autoPlay>
-                        <source src={video3} type="video/mp4"/>
-                    </video>            
-                <video className="video4" loop controls autoPlay>
-                        <source src={video4} type="video/mp4"/>
-                    </video>            
-                <video className="video5" loop controls autoPlay>
-                        <source src={video5} type="video/mp4"/>
-                    </video>
-              </div>
-              <p className="centered fs-3">Engaged <br /> in the joy  of baking<br /> With us, anyone can  make <br /> chef recipes</p>
-             <Link className="centeredBtn " to={{pathname:"/Catalog"}}>Shop Now</Link>
-            </div>  
-            <img src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
-            {/* <Carousel id="carouselExampleControls1" className="w-100">
+    const dispatch = useDispatch()
+    const productsList=useSelector(state=>state.productList)
+    const{loading,error,products}=productsList
+
+    const userLogin=useSelector(state=>state.userLogin)
+    const {userInfo}=userLogin
+
+   
+    const[ arrRandom,setArrRandom]= useState([])
+
+    useEffect(() => {
+        dispatch(listProducts())
+
+    }, [loading] )
+    
+
+        setTimeout(() => {
+            let random
+            let arr=[]
+            if(!loading && products.length>0)
+            {
+                for (let i = 0; i < 6; i++) {
+                    random=products[Math.floor(Math.random()*products.length)]
+                    if(arr.includes(random))
+                     i-=1
+                    else
+                    arr.push(random) 
+             }
+           } 
+           setArrRandom(arr)  
+        }, 3000);
+           
+    
+
+
+
+
+   return(
+       <>{ loading? <Loader/>:
+       <div className="wrap-homePage">
+
+        {/* <img className="img-principal" src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> */}
+
+
+              <Carousel id="carouselExampleControls1" className="w-100">
                        <div className="carousel-item">
-                            <img  src="https://cdn.pixabay.com/photo/2021/01/01/21/56/cooking-5880136__340.jpg" alt="altplacer" />
+                        <video className="video1" loop={true} autoPlay={true} muted={true}>
+                            <source src={video1} type="video/mp4"/>
+                         </video>                           
                         </div>
                         <div className="carousel-item ">
-                            <img  src="https://media.istockphoto.com/photos/raw-ingredients-for-cooking-pie-bakery-background-top-view-picture-id1254524198?k=20&m=1254524198&s=612x612&w=0&h=8zgFjQDjdWeFYT5egLOFHvWsthZXBbwHTeIYeXzx6gQ=" alt="altplacer" />
+                        <video className="video2" loop={true} autoPlay={true} muted={true}>
+                           <source src={video2} type="video/mp4"/>
+                       </video> 
+                        </div>
+                        <div className="carousel-item ">
+                        <video className="video3" loop={true} autoPlay={true} muted={true}>
+                             <source src={video3} type="video/mp4"/>
+                        </video> 
                         </div>
                         <div className="carousel-item active">
-                            <img  src="https://media.istockphoto.com/photos/kitchen-utensils-and-tools-for-homemade-baking-on-a-light-wooden-picture-id853351012?k=20&m=853351012&s=612x612&w=0&h=9kyOVQB8RvQ8ujUghnAyBET8fScNhW7BwJ_ihgSNRgQ=" alt="altplacer" />
-                            <text className="centered fs-3">Engaged in the joy of baking <br />With us, anyone can make chef recipes</text>
-                            <Link className="centeredBtn " to={{pathname:"/Catalog"}}>Shop Now</Link>
+                        <video className="video4" loop={true} autoPlay={true} muted={true}>
+                           <source src={video4} type="video/mp4"/>
+                         </video>
                         </div>
                         <div className="carousel-item">
-                            <img  src="https://media.istockphoto.com/photos/mom-with-daughter-on-kitchen-picture-id883109876?k=20&m=883109876&s=612x612&w=0&h=JzQOzGQeM7fqU5gAuS6J_f5WMXK8SPxItM6bMeCaLbg=" alt="altplacer" />
+                        <video className="video5" loop={true} autoPlay={true} muted={true}>
+                           <source src={video5} type="video/mp4"/>
+                        </video>
                         </div>
                         <div className="carousel-item">
-                            <img  src="https://media.istockphoto.com/photos/belgian-waffles-with-ice-cream-and-berries-picture-id1033058306?k=20&m=1033058306&s=612x612&w=0&h=KETbzjwRwAuX18aqp1Ue7uMDol7JpCiVkXY_FNbRhxw=" alt="altplacer" />
+                        <video className="video6" loop={true} autoPlay={true} muted={true}>
+                           <source src={video6} type="video/mp4"/>
+                         </video>
                         </div>
 
-             </Carousel> */}
-    
-          </div>
+             </Carousel>
+      
+                  <p className="centered fs-3">Engaged  in the joy  of baking With us, anyone can  make chef recipes</p>  
+
+            <div className="home-Recipe d-flex">
+              <Link  to={{pathname:"/Easy"}}> <img  src="https://realfood.tesco.com/media/images/RFO-1400x919-Mini-sticky-toffee-sundaes-56c718e5-b5dc-40f4-85ce-20992a3ecb86-0-1400x919.jpg" /><h6 className="nameRecipes">Easy-Recipe</h6> </Link>
+              <Link  to={{pathname:"/Chef-Recipe"}}><img src="https://realfood.tesco.com/Media/images/RFO-636x418-Raspberry-ice-cream-cake-34942a7b-13cf-44c6-a8b3-4179b7bd70f8-0-636x418.jpg" alt="" /><h6 className="nameRecipes">Chef-Recipe</h6></Link>
+              <Link  to={{pathname:"/Pantry"}}> <img src="https://tse1.mm.bing.net/th?id=OIP.FpSlTZXSFJ6GhJSsHjQq2AHaJ7&pid=Api&P=0&w=300&h=300" alt="" /><h6 className="nameRecipes">According to your pantry</h6></Link>
+              <Link  to={{pathname:userInfo && userInfo.length!==0?"/RecipeBook":"/SignIn"}}> 
+              <img src="https://tse2.mm.bing.net/th?id=OIP.Mm-JksN5iN10bM97dhfynAHaFk&pid=Api&P=0&w=216&h=163" alt="" />
+              <h6 className="nameRecipes">Your Recipe Book</h6></Link>
+            </div>
+            <div className="home-Products d-flex">
+             {arrRandom.length>0 &&
+             <Link className="btn-home-products" to={{pathname:"/Catalog"}}>Shop Now</Link>}  
+                    <div className="shop-now d-flex">
+                        <div>
+                        {arrRandom.map((product)=>
+                        <img src={product.image} alt="" />
+                        )}</div>
+                    </div>
+            </div>
+        </div>}
+          </>
         )
-    }
+    
 }
-export default HomePage
+export default HomePage           
+
+
+
+
+       

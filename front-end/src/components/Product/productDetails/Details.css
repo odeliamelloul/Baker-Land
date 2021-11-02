@@ -1,9 +1,8 @@
 
 .detailsCard{
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     display: flex;
+    flex-wrap: wrap;
     width: max-content;
     text-align:start;
   
@@ -20,7 +19,7 @@
   .nameOfProduct{
     
     color: rgb(204 151 0) !important;  
-    font-size: 2rem !important;
+    font-size:24px !important;
 
   }
 
@@ -80,7 +79,7 @@
   background-color: transparent;
   border: none;
   width: max-content;
-  margin-left: 150px;
+  margin: 0 auto;
  }
 .copied
 {
@@ -114,6 +113,7 @@
 {
   font-size: 18px !important;
 }
+
 /* Animatio when add to cart */
 .animImg {
   width: 50px;
@@ -129,4 +129,40 @@
   0% {bottom: 300px;right: 200px}
   50% {bottom: 850px;right: 20px} 
   100%{bottom: 1300px;right:10px}
+}
+@media only screen and (min-width:600px) and (max-width:930px) {
+  .detailsCard
+  {
+   width: 95vw; 
+  } 
+  .detailsImg,.details
+  {
+  width: 45vw;
+   height: 50vw;
+  }
+
+}
+@media only screen and (max-width:600px) {
+  .detailsCard
+  {
+   width: 95vw; 
+   margin-left: 0;
+  } 
+  .detailsImg,.details
+  {
+    width: 95vw;
+    margin-left: 0;
+  }
+  .detailsImg
+  {
+    height: 30vh;
+  }
+
+}
+@media only screen and (max-width:400px) {
+
+  .btnAdd
+  {
+    width: 80vw;
+  }
 }
