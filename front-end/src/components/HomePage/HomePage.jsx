@@ -21,29 +21,26 @@ function HomePage(){
     const {userInfo}=userLogin
 
    
-    const[ arrRandom,setArrRandom]= useState([])
-
+    let arrRandom=[]
     useEffect(() => {
         dispatch(listProducts())
 
     }, [loading] )
     
 
-        setTimeout(() => {
+   
             let random
-            let arr=[]
             if(!loading && products.length>0)
             {
                 for (let i = 0; i < 6; i++) {
                     random=products[Math.floor(Math.random()*products.length)]
-                    if(arr.includes(random))
+                    if(arrRandom.includes(random))
                      i-=1
                     else
-                    arr.push(random) 
+                    arrRandom.push(random) 
              }
            } 
-           setArrRandom(arr)  
-        }, 3000);
+
            
     
 

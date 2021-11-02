@@ -204,7 +204,7 @@ hr.vertical {
     font-weight: bold !important;
     font-size: 24px;
  
-    background: -webkit-linear-gradient(rgb(192, 152, 204), rgb(214, 54, 107));
+    background: -webkit-linear-gradient(rgb(252 ,217, 153), rgb(214, 54, 107));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

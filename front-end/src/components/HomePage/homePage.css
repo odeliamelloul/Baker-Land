@@ -93,13 +93,13 @@
 
 
 
-  @media only screen and (max-width: 630px) {
+  @media only screen and (max-width: 660px) {
     
     video
     {
      height: max-content;
-     border-bottom-left-radius: 100px;
-     border-bottom-right-radius: 100px;
+     border-bottom-left-radius: 50vw;
+     border-bottom-right-radius:50vw;
     }
     .home-Recipe
     {
