@@ -127,7 +127,7 @@ function Header(props)
                 }
               </div>    
               </div> 
-                 <a href="/Bag" className="container bag">
+                 <a href="/Bag" className="container-bag">
                           <button className= "openCartBtn" onClick={handleCloseModalSmallCart} onMouseOver={handleShowModalSmallCart}>
                             <img src="https://img.icons8.com/83176B/ios-filled/40/shopping-bag.png"/>
                             <p className="centered-cart-qty">{cartItems.map((item)=>item.qty).reduce((prev,next)=>prev+next,0)}</p>

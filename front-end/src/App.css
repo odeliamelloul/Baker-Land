@@ -66,9 +66,8 @@ li{
   margin-right:30px !important;
 }
   
-.container{
-  margin-top: 20px;
-  margin-bottom: 20px;
+.container-Products{
+  margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
   max-width: 1000px !important;

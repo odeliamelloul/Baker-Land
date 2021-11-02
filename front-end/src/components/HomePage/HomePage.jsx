@@ -54,7 +54,7 @@ function HomePage(){
         {/* <img className="img-principal" src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> */}
 
 
-              <Carousel id="carouselExampleControls1" className="w-100">
+              <Carousel id="carouselExampleControls7" className="carousel-six-video">
                        <div className="carousel-item">
                         <video className="video1" loop={true} autoPlay={true} muted={true}>
                             <source src={video1} type="video/mp4"/>
@@ -88,7 +88,7 @@ function HomePage(){
 
              </Carousel>
       
-                  <p className="centered fs-3">Engaged  in the joy  of baking With us, anyone can  make chef recipes</p>  
+                  <p className="centered fs-3">Engaged  in the joy  of baking , With us anyone can  make chef recipes !</p>  
 
             <div className="home-Recipe d-flex">
               <Link  to={{pathname:"/Easy"}}> <img  src="https://realfood.tesco.com/media/images/RFO-1400x919-Mini-sticky-toffee-sundaes-56c718e5-b5dc-40f4-85ce-20992a3ecb86-0-1400x919.jpg" /><h6 className="nameRecipes">Easy-Recipe</h6> </Link>
