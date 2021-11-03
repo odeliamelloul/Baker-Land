@@ -24,10 +24,9 @@
     color:rgb(201, 93, 133)!important;
   
   }
-
   .bakerVideo
   {
-    height:max-content;
+    /* height:max-content; */
     width: 100vw;
     background-size:contain;
   }
@@ -106,7 +105,7 @@
     
    .bakerVideo
     {
-     height: max-content;
+     height: max-content !important;
      -webkit-border-radius: 0 0 50vw 50vw !important;
      -khtml-border-radius: 0 0 50vw 50vw !important;
      -moz-border-radius: 0 0 50vw 50vw !important;

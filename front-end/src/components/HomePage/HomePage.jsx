@@ -41,12 +41,6 @@ function HomePage(){
              }
            } 
 
-           
-    
-
-
-
-
    return(
        <>{ loading? <Loader/>:
        <div className="wrap-homePage">
