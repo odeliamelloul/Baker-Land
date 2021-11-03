@@ -340,7 +340,9 @@ select
     font-size: 16px !important;
 }
 @media only screen and (max-width: 678px) {
-    
+    .headerR{
+        width: 90vw;
+    }
     #all-matched-recipes
     {
         width: 100vw;

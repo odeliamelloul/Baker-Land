@@ -6,7 +6,7 @@ import { useSelector,useDispatch } from 'react-redux'
 import Loader from '../Loader'
 import { getUserDetails, updateUserProfile } from '../../actions/userActions'
 
-export default function Recipe({match}) {
+export default function Recipe({match,history}) {
   
   // const[showModal,setShowModal]=useState(false)
   const[recipeAdded,setRecipeAdded]=useState(false)
@@ -37,9 +37,14 @@ if(recipes.length>0)
 
 const addRecipeToBook=(id)=>
 {
-  setRecipeAdded(true)
+  
+if(user &&user.length>0)
+ {setRecipeAdded(true) 
   user.myRecipe=[...user.myRecipe,id]                                                                                                                                                                                                                            
-  dispatch(updateUserProfile({id:user._id,myRecipe:user.myRecipe}))
+  dispatch(updateUserProfile({id:user._id,myRecipe:user.myRecipe}))}
+  else{
+    history.push("/SignIn")
+  }
 }
 
     return (
@@ -72,7 +77,7 @@ const addRecipeToBook=(id)=>
                     </div>
                     <div>
                     {/* <button className="btnRecipes"> Share</button> */}
-                    {(user.myRecipe|| recipeAdded)  &&
+                    {(user && user.myRecipe|| recipeAdded)  &&
                       user.myRecipe.includes(recipe._id)
                     ?
                       <p style={{color:"rgb(199 125 83)"}}>This recipe is in your <img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/32/000000/external-recipe-book-baking-and-bakery-icongeek26-outline-colour-icongeek26.png"/></p>
