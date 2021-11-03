@@ -16,9 +16,11 @@
 {   margin: 20px auto;
     width: 70%;
 }
+
 .infoR
 {
     width: 50%;
+    height: max-content;
 }
 .wrapRecipe img{
     margin: 0;
@@ -26,7 +28,6 @@
 .wrapRecipe .recipe-image
 {
     width:55%;
-    height:inherit;
     object-fit:cover;
 }
 .headerR
@@ -109,6 +110,7 @@
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
   }
+
   
   @keyframes nameMove {
     0% {bottom: 87px;}
@@ -137,11 +139,11 @@
 {
  margin-left: 10px;
 }
-.wrapEasy
+/* .wrapEasy
 {
     width: max-content;
     margin: 0 auto;
-}
+} */
 .openModalBtn
 {
     margin-right: 30px!important;
@@ -164,13 +166,17 @@
     margin: 10px;
     background: #fff9ed;
 }
+
 .btn-check-recipe
 {
     background: rgb(255 230 184) !important;
     border-radius: 0px;
 }
-.matched-recipe
-{  margin: 20px !important}
+.matched-recipe>img
+{  margin: 20px !important;
+    width: 25vw !important;
+    height: 25vw !important;
+}
 
 .ErrForm
 {background-color: transparent !important;}
@@ -291,6 +297,21 @@ select
     border: rgb(146, 39, 141) 2px solid;
     margin-left: 10px;
 }
+.btn-check-recipe>a
+{
+    color:rgb(116, 39, 97) !important;
+    font-weight: bolder !important;
+}
+.pantry,.wrap-pantry>p 
+{
+    width: 80vw;
+}
+.wrap-pantry
+{
+    width: max-content;
+    margin: 0 auto;
+}
+
 .pantry>button
 {
     height: max-content;
@@ -304,6 +325,46 @@ select
     height: max-content;
 }
 @media only screen and (max-width: 678px) {
+    
+    #all-matched-recipes
+    {
+        width: 100vw;
+    }
+
+    .pantry
+    {
+        width: 100vw;
+    }
+    .pantry>button
+    {
+        width: 43vw;
+    }
+    .matched-recipe>img
+    {
+        width: 90vw !important;
+        height: 90vw !important;
+        margin: 0 auto;
+    }
+    .wrap-pantry>p 
+    {
+        width: 100vw;
+    }
+    .pantry>button>img,.pantry>button>p{
+        width: 35vw !important;
+    }
+    .pantry>button>img
+    {
+        height: 35vw;
+    }
+    .btn-check-recipe
+    {
+        position:fixed;
+        top: 90vh;
+        left: 0;
+        right: 0;
+        width: 100vw;
+
+    }
     .wrap-easy-img{
         padding: 0;
         padding-top: 15px;

@@ -137,10 +137,10 @@ hr{
 b{
   font-size: 12px;
 }
-a{
+/* a{
   display: flex;
   flex-direction: column;
-}
+} */
 .couponTitle
 {
   font-weight: bold;

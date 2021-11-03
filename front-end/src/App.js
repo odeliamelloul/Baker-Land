@@ -26,6 +26,7 @@ import Pantry from "./components/Recipes/Pantry"
 import Recipe from './components/Recipes/Recipe';
 import RecipeBook from './components/Recipes/RecipeBook';
 import RecipeEditScreen from './components/Recipes/Create-update-recipe/RecipeEditScreen';
+import CreateRecipe from './components/Recipes/Create-update-recipe/CreateRecipe';
 import ListRecipes from './components/Recipes/ListRecipes';
 
 import Shipping from './components/CheckOut/Shipping';
@@ -72,6 +73,7 @@ class App extends React.Component{
                 <Route  path="/RecipeBook" component={RecipeBook} />   
                 <Route  path="/Pantry" component={Pantry} />    
                 <Route  path="/RecipeEdit/:id/edit" component={RecipeEditScreen} />     
+                <Route  path="/CreateRecipe" component={CreateRecipe} />     
                 <Route  path="/admin/userList" component={UserListScreen} />    
                 <Route  path="/admin/user/:id/edit" component={UserEditScreen} />    
                 <Route  path="/admin/productList" component={ProductListScreen} />    

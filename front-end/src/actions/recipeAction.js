@@ -38,7 +38,9 @@ export const listRecipes=()=> async(dispatch)=>
   }
 }
 
-export const createRecipe = () => async (dispatch, getState) => {
+export const createRecipe = ( name,image,ingredients,quantity,timeCook, timePrepare,toShop,steps, description,calories,
+    Tip,category) => async (dispatch, getState) => {
+
   try {
     dispatch({
       type: RECIPE_CREATE_REQUEST,
@@ -49,11 +51,13 @@ export const createRecipe = () => async (dispatch, getState) => {
 
     const config = {
       headers: {
-        Authorization: `Bearer ${userInfo.token}`,
+        'Content-Type': 'application/json',
       },
     }
 
-    const { data } = await axios.post(`/api/recipes`, {}, config)
+    const { data } = await axios.post(`/api/recipes`, 
+    {name,image,ingredients,quantity,timeCook, timePrepare,toShop,steps, description,calories,
+      Tip,category}, config)
 
     dispatch({
       type: RECIPE_CREATE_SUCCESS,

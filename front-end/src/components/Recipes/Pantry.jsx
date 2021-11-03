@@ -66,7 +66,7 @@ useEffect(() => {
        setMatchRecipe(findRecipe);
     }
     return (
-        <div>
+        <div className ="wrap-pantry">
             <h1>Your Pantry</h1>
             
                     <p>Click on the products you have so we can show you match recipes </p>
@@ -78,18 +78,18 @@ useEffect(() => {
                         </button>)
                         }
                     </div>
-                    <button className="btn-check-recipe" onClick={showRecipes}>Check matched Recipes</button>
+                    <button className="btn-check-recipe" onClick={showRecipes}> <a href='#matched-recipe'>Check matched Recipes</a></button>
                     {
                         matchRecipe.length==0 && flag &&
                         <p>sorry not find any recipe that match your choose</p>
                     }
                    
-                    <div className="d-flex flex-wrap wrapEasy ">
+                    <div id="all-matched-recipes" className="d-flex flex-wrap wrapEasy">
                     { matchRecipe.map((idRecipe)=>
                             recipes.map((item)=>
                             { if(item._id===idRecipe)
                                 return (<Link  className="matched-recipe" to={{pathname:`/Recipe/${item.name.replaceAll(" ","-")}`}}>
-                                        <img width="300px" height="169px" src={item.image} alt="" />
+                                        <img src={item.image} alt="" />
                                         <h5  className="nameRecipes" >{item.name}</h5> 
                                         </Link>)
                             })

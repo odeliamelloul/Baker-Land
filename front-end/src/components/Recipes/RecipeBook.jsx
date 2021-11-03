@@ -21,7 +21,7 @@ const RecipeBook = ({history}) => {
 
     const crateRecipe=()=>
     {
-        dispatch(createRecipe())
+        history.push(`CreateRecipe`)
     }
 
     return (

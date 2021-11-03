@@ -6,27 +6,60 @@ import asyncHandler from 'express-async-handler'
 //Post /api/Recipes
 //public
 const addRecipe = asyncHandler(async (req, res) => {
-    
-        const recipe = new Recipe(
-            {
-                name: "Recipe name",
-                image: "Url",
-                ingredients: [],
-                quantity: 0,
-                timeCook: 0,
-                timePrepare: 0,
-                toShop:[],
-                steps: [],
-                description: "description",
-                calories: 0,
-                Tip:"Tip",
-                category:"category"
-            }
-        )
-        const createdRecipe= await recipe.save()
-        res.status(201).json(createdRecipe)
-        
+    const{
+        name,
+        image,
+        ingredients,
+        quantity,
+        timeCook,
+        timePrepare,
+        toShop,
+        steps,
+        description,
+        calories,
+        Tip,
+        category,
+    } = req.body
+
+    const recipe=await Recipe.create({
+        name,
+        image,
+        ingredients,
+        quantity,
+        timeCook,
+        timePrepare,
+        toShop,
+        steps,
+        description,
+        calories,
+        Tip,
+        category,
+    }) 
+    if(recipe)
+    {
+        res.status(201).json({
+            _id:recipe._id,
+            name: recipe.name,
+            image: recipe.image,
+            ingredients: recipe.ingredients,
+            quantity: recipe.quantity,
+            timeCook: recipe.timeCook,
+            timePrepare: recipe.timePrepare,
+            toShop:recipe.toShop,
+            steps:recipe.steps,
+            description: recipe.description,
+            calories: recipe.calories,
+            Tip:recipe.Tip,
+            category:recipe.category 
+        })
+      
+       
     }
+    else {
+        res.status(400)
+        throw new Error('Invalid Recipe data')  
+    }
+}
 )
 
 //get all Recipes

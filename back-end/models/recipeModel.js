@@ -58,7 +58,7 @@ const RecipeSchema =mongoose.Schema(
         },
         description:{
             type:String,
-            required:true,
+            required:false,
             default:0
         },
         calories:{
