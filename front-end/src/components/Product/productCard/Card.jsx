@@ -39,7 +39,7 @@ const addProductToCart=()=>
        return(
           <div>
                <div  className="card">
-                   <Link style={{textDecoration:"none"}} to={{pathname:`/Catalog/${props.id}`}} >                  
+                   <Link className="card-product" style={{textDecoration:"none"}} to={{pathname:`/Catalog/${props.id}`}} >                  
                     <img  src={props.image} className="card-img-top" alt="..."/>
                     <label className="mb-2 card-name">{props.name}</label> 
                    </Link> 

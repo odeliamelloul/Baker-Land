@@ -11,7 +11,7 @@ const Pagination = ({ productsPerPage, totalProducts, paginate,currentPage }) =>
   let nextBtn=totalProducts>(currentPage*productsPerPage)?true:false
 
   return (
-    <nav className="nav-pagination">
+    <nav className={window.location.pathname==="Pantry"?"nav-pagination-pantry":"nav-pagination"}>
       {
        pageNumbers.length>1 && currentPage>1 &&currentPage<pageNumbers.length  &&
         <div className="d-flex ">

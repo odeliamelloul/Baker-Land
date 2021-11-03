@@ -417,6 +417,10 @@ select
         left: 80%;
         width: max-content !important;
     }
+    .nav-pagination-pantry
+    {
+        background-color:rgb(250 246 238) ;
+    }
 }
 
 @media only screen and (max-width: 400px) {

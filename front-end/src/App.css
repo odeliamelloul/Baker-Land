@@ -26,6 +26,10 @@ body,html{
 {
   padding-bottom: 20px;
 }
+.card-product{
+  display: flex;
+  flex-direction: column;
+}
 .nav-pagination
 {
   margin-left: 20px;

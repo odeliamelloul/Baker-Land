@@ -31,7 +31,7 @@
     width: 100vw;
     background-size:contain;
   }
-  .wrap-videos,.home-Products{
+  .home-Products{
      
       margin-top: 20px;
       margin-bottom: 20px;
@@ -93,8 +93,16 @@
 
 
 
+@media only screen and (max-width: 1040px) {
+    
+  .home-Recipe img {
+    height: 200px;
+    width: 250px;
+    margin: 0 auto;
 
-  @media  screen and (max-width: 770px) {
+}
+}
+  @media only screen and (max-width: 770px) {
     
    .bakerVideo
     {
@@ -102,6 +110,7 @@
      -webkit-border-radius: 0 0 50vw 50vw !important;
      -khtml-border-radius: 0 0 50vw 50vw !important;
      -moz-border-radius: 0 0 50vw 50vw !important;
+     -epub-border-radius: 0 0 50vw 50vw !important;
      border-radius: 0 0 50vw 50vw !important;
     }
     .home-Recipe
@@ -124,7 +133,7 @@
     }
   }
 
-  @media  screen and (max-width: 500px) {
+  @media only screen and (max-width: 500px) {
     
 
     .home-Recipe
@@ -144,12 +153,3 @@
 
 
 
-  @media only screen and (max-width: 1040px) {
-    
-    .home-Recipe img {
-      height: 200px;
-      width: 250px;
-      margin: 0 auto;
-
-  }
-  }

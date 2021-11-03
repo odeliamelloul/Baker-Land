@@ -65,6 +65,8 @@ class Footer extends React.Component {
                         </div>
                     </Carousel>
          }
+         {window.location.pathname!=="/Pantry"&&
+         <>
         <div className="social d-flex">
           <a
             className="fa fa-facebook"
@@ -103,6 +105,7 @@ class Footer extends React.Component {
           </a>
           © All rights reserved
         </div>
+        </>}
       </div>
     );
   }
