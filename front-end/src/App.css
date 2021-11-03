@@ -342,6 +342,10 @@ h4{
 h6 {
   font-size: 1.8rem !important;
 }
+.aboutUs
+{
+  background-color: rgb(248, 233, 233);
+}
 
 @media only screen and (max-width: 580px) { 
   .search-Box

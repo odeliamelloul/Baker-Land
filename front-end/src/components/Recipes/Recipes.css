@@ -344,7 +344,7 @@ select
     }
     .pantry>button
     {
-        width: 43vw;
+        width: 41vw;
     }
     .matched-recipe>img
     {
@@ -354,7 +354,7 @@ select
     }
     .wrap-pantry>p 
     {
-        width: 100vw;
+        width: 98vw;
     }
     .pantry>button>img,.pantry>button>p{
         width: 35vw !important;
@@ -369,7 +369,7 @@ select
         top: 90vh;
         left: 0;
         right: 0;
-        width: 100vw;
+        width: 94vw;
 
     }
     .wrap-easy-img{
@@ -421,8 +421,9 @@ select
     }
     .book-name-recipe
     {
+        font-size: 14px !important;
         left: 80%;
-        width: max-content !important;
+        width: 50vw !important;
     }
     .nav-pagination-pantry
     {
@@ -438,7 +439,7 @@ select
     .book-name-recipe
     {
         left: 10vw !important;
-        width: max-content !important;
+        width:50vw !important;
     }
 }
 

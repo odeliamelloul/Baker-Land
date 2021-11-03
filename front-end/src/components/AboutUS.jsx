@@ -5,7 +5,7 @@ import React from "react"
 function AboutUs()
 { 
  return (
-   <div className="d-flex flex-column text-center " >
+   <div className="d-flex flex-column text-center aboutUs " >
       <h1>About Us</h1>
       <p>
       {/* <img src="https://img.icons8.com/color/48/000000/lol--v4.png"/> */}
