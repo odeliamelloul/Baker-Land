@@ -42,7 +42,7 @@ const CreateRecipe = ({match,history}) => {
             dispatch(updateUserProfile({id:userInfo._id,myRecipe:newRecipesBook}))
             history.push(`/RecipeBook`)
         }
-        }, [success])
+        }, [success,history])
     
                 
    

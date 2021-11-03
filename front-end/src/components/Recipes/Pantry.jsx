@@ -79,10 +79,10 @@ useEffect(() => {
                         </button>)
                         }
                     </div>
-                    <button className="btn-check-recipe" onClick={showRecipes}> <a href='#matched-recipe'>Check matched Recipes</a></button>
+                    <button className="btn-check-recipe" onClick={showRecipes}> <a href='#all-matched-recipes'>Check matched Recipes</a></button>
                     {
                         matchRecipe.length==0 && flag &&
-                        <p>sorry not find any recipe that match your choose</p>
+                        <p className="err-choose-recipe">sorry not find any recipe that match your choose</p>
                     }
                    
                     <div id="all-matched-recipes" className="d-flex flex-wrap wrapEasy">

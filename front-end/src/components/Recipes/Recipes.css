@@ -16,7 +16,11 @@
 {   margin: 20px auto;
     width: 70%;
 }
-
+.err-choose-recipe
+{
+    background-color: tomato;
+    color: whitesmoke;
+}
 .infoR
 {
     width: 50%;
