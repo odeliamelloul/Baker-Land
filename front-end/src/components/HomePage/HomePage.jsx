@@ -65,6 +65,9 @@ function HomePage(){
                         </video> 
                         </div>
                         <div className="carousel-item active">
+                           <img className="bakerVideo" src="https://tse2.mm.bing.net/th?id=OIP.L7tTFieRU-8Hp3YsNh71TgHaHa&pid=Api&P=0&w=300&h=300" alt="" />                          
+                        </div>
+                        <div className="carousel-item ">
                         <video className="bakerVideo" loop={true} autoPlay={true} muted={true}>
                            <source src={video4} type="video/mp4"/>
                          </video>
