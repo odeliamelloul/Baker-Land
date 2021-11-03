@@ -65,10 +65,10 @@ function Header(props)
                 <ul className="navbar-nav  navbar-collapse justify-content-center  me-auto mb-2 mb-lg-0">
                    
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/"> Home</a>
+                    <Link className="nav-link active" aria-current="page" to={{pathname:"/"}}> Home</Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page"  href="/Catalog">Catalog</a>
+                    <Link className="nav-link active" aria-current="page"  to={{pathname:"/Catalog"}}>Catalog</Link>
                   </li>
                  
 
@@ -77,21 +77,21 @@ function Header(props)
                     Recipes
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a className="dropdown-item" href="/Easy">Easy</a></li>
-                      <li><a className="dropdown-item" href="/Chef-Recipe">Chef-Recipe</a></li>
-                      <li><a className="dropdown-item" href="/Pantry"> according to your pantry</a></li>  
+                      <li><Link className="dropdown-item" to={{pathname: "/Easy"}}>Easy</Link></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/Chef-Recipe"}}>Chef-Recipe</Link></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/Pantry"}}> according to your pantry</Link></li>  
                       <li><hr className="dropdown-divider"/></li>
-                      <li><a className="dropdown-item" href={
-                        userInfo && userInfo.length!==0?
-                        "/RecipeBook":"/SignIn"}>Your recipes book</a></li>
+                      <li><Link className="dropdown-item"
+                       to={{pathname: userInfo && userInfo.length!==0?
+                        "/RecipeBook":"/SignIn"}}>Your recipes book</Link></li>
                     </ul>
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/AboutUs">About</a>
+                    <Link className="nav-link active" aria-current="page" to={{pathname:"/AboutUs"}}>About</Link>
                    </li>
                    <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/ContactUs">ContactUs</a>
+                    <Link className="nav-link active" aria-current="page" to={{pathname:"/ContactUs"}}>ContactUs</Link>
                    </li>
                    {/* <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="/Blog">Blog</a>
@@ -103,9 +103,9 @@ function Header(props)
                     Admin Menu
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a className="dropdown-item" href="/admin/userList">Users</a></li>
-                      <li><a className="dropdown-item" href="/admin/productList">Products</a></li>
-                      <li><a className="dropdown-item" href="/admin/orderList">Orders</a></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/admin/userList"}}>Users</Link></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/admin/productList"}}>Products</Link></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/admin/orderList"}}>Orders</Link></li>
                     </ul>
                   </div>)}
                <div className="dropdown" >
@@ -116,23 +116,23 @@ function Header(props)
                   userInfo && userInfo.length!==0 ?
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       <li className="dropdown-item">{userInfo.name}</li>
-                      <li><a className="dropdown-item" href="/UserProfile">profile</a></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/UserProfile"}}>profile</Link></li>
                       <li><button className="dropdown-item" onClick={logOut}>Sign Out</button></li>
                  </ul> 
                  :
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a className="dropdown-item" href="/SignIn" >SignIn</a></li>
-                      <li><a className="dropdown-item"  href="/SignUp" >SignUp</a></li>
+                      <li><Link className="dropdown-item" to={{pathname:"/SignIn"}} >SignIn</Link></li>
+                      <li><Link className="dropdown-item"  to={{pathname:"/SignUp"}} >SignUp</Link></li>
                   </ul> 
                 }
               </div>    
               </div> 
-                 <a href="/Bag" className="container-bag">
+                 <Link to={{pathname:"/Bag"}} className="container-bag">
                           <button className= "openCartBtn" onClick={handleCloseModalSmallCart} onMouseOver={handleShowModalSmallCart}>
                             <img src="https://img.icons8.com/83176B/ios-filled/40/shopping-bag.png"/>
                             <p className="centered-cart-qty">{cartItems.map((item)=>item.qty).reduce((prev,next)=>prev+next,0)}</p>
                           </button>
-                  </a>      
+                  </Link>      
             </div>
     
           </nav>

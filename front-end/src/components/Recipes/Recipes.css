@@ -34,6 +34,10 @@
     width:55%;
     object-fit:cover;
 }
+.wrapEasy .headerR
+{
+    margin: 20px auto !important;
+}
 .headerR
 {  
     margin: 20px 10px;
