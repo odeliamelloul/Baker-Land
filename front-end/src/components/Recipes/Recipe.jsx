@@ -8,8 +8,9 @@ import { getUserDetails, updateUserProfile } from '../../actions/userActions'
 
 export default function Recipe({match}) {
   
-  const[showModal,setShowModal]=useState(false)
-  const showIngModal=()=> {setShowModal(true) }
+  // const[showModal,setShowModal]=useState(false)
+  const[recipeAdded,setRecipeAdded]=useState(false)
+  // const showIngModal=()=> {setShowModal(true) }
   
   const recipesList=useSelector(state=>state.recipesList)
   const{loading,error,recipes}=recipesList
@@ -36,6 +37,7 @@ if(recipes.length>0)
 
 const addRecipeToBook=(id)=>
 {
+  setRecipeAdded(true)
   user.myRecipe=[...user.myRecipe,id]                                                                                                                                                                                                                            
   dispatch(updateUserProfile({id:user._id,myRecipe:user.myRecipe}))
 }
@@ -70,13 +72,13 @@ const addRecipeToBook=(id)=>
                     </div>
                     <div>
                     {/* <button className="btnRecipes"> Share</button> */}
-                    {user.myRecipe &&
+                    {(user.myRecipe|| recipeAdded)  &&
                       user.myRecipe.includes(recipe._id)
                     ?
                       <p style={{color:"rgb(199 125 83)"}}>This recipe is in your <img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/32/000000/external-recipe-book-baking-and-bakery-icongeek26-outline-colour-icongeek26.png"/></p>
                     :
                     <div>
-                    <button onClick={()=>addRecipeToBook(recipe._id)} className="btnRecipes">add recipe to your <img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/32/000000/external-recipe-book-baking-and-bakery-icongeek26-outline-colour-icongeek26.png"/></button>
+                      <button onClick={()=>addRecipeToBook(recipe._id)} className="btnRecipes">add recipe to your <img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/32/000000/external-recipe-book-baking-and-bakery-icongeek26-outline-colour-icongeek26.png"/></button>
                     </div>
                     
                     }
@@ -88,7 +90,7 @@ const addRecipeToBook=(id)=>
                         <h2 className="headerR"> ingredients:  </h2>
                         <ul >{recipe.ingredients===undefined?<Loader/>: recipe.ingredients.map((item)=> <li>{item}</li>)} </ul>  
                      </div>    
-                       <IngModal className="IngModal" open={showModal} toShop={recipe.toShop}/>
+                       <IngModal className="IngModal"  toShop={recipe.toShop}/>
                  </div>
                  <div>
                  <div className="steps">
@@ -96,7 +98,7 @@ const addRecipeToBook=(id)=>
                    <ol >{recipe.steps===undefined?<Loader/>: recipe.steps.map((item)=> <li>{item} <hr/></li>)} </ol>  
                   </div>
                  </div>
-                 {recipe.Tip!=="Tip" &&
+                 {recipe.Tip!=="" &&
                  <div className="tips">
                  <h2 className="headerR"> Recipes Tips: </h2>
                   <div>{recipe.Tip}</div>

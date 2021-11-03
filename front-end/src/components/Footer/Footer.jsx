@@ -103,7 +103,7 @@ class Footer extends React.Component {
           >
             BakerLand@gmail.com
           </a>
-          © All rights reserved
+          © All rights reserved to Odelia Melloul
         </div>
         </>}
       </div>

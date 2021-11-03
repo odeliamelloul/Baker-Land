@@ -48,7 +48,7 @@ function HomePage(){
         {/* <img className="img-principal" src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> */}
 
 
-              <Carousel id="carouselExampleControls7" className="carousel-six-video">
+              <Carousel id="carouselExampleControls7">
                        <div className="carousel-item">
                         <video className="bakerVideo" loop={true} autoPlay={true} muted={true}>
                             <source src={video1} type="video/mp4"/>

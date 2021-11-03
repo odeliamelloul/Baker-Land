@@ -1,5 +1,5 @@
 import React,{ useState ,useRef,useEffect} from 'react'
-import { Modal, Button, Table } from "react-bootstrap";
+import { Modal,  Table } from "react-bootstrap";
 import { NavLink } from 'react-router-dom';
 import { useSelector,useDispatch} from "react-redux"
 import "./Recipes.css"
@@ -11,8 +11,10 @@ function IngModal(props) {
 
   const productsList=useSelector(state=>state.productList)
   const{loading,error,products}=productsList
+
   const toShop=props.toShop?props.toShop:[]
   const cart = useSelector((state) => state.cart)
+
   const dispatch = useDispatch()
 
     useEffect(() => {

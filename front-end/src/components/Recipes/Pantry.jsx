@@ -12,13 +12,7 @@ const [chooseArr, setChooseArr] = useState([])
 const [matchRecipe, setMatchRecipe] = useState([])
 const [flag, setFlag] = useState(false)
 
-const [currentPage, setCurrentPage] = useState(1);
-const [productsPerPage] = useState(16);
 
-  // Get current products
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  let currentProducts = ingredients? ingredients.slice(indexOfFirstProduct, indexOfLastProduct):[];
 
 const recipesList=useSelector(state=>state.recipesList)
 const{loading,error,recipes}=recipesList
@@ -57,8 +51,6 @@ useEffect(() => {
             setChooseArr([...chooseArr,ingName])
         }   
     }
-      // Change page
-         const paginate = pageNumber => setCurrentPage(pageNumber);
 
     const showRecipes=()=>
     { 
@@ -81,18 +73,12 @@ useEffect(() => {
                     <p>Click on the products you have so we can show you match recipes </p>
                     <div className="pantry d-flex flex-wrap">
                         {
-                            currentProducts.map((ing,index)=>
+                         ingredients.map((ing,index)=>
                         <button onClick={()=>addNewIng(index,ing.name)} ref={addToRef} id={index} className="ing-btn-pantry"><img src={ing.image} alt="" />
                             <p>{ing.name}</p>
                         </button>)
                         }
                     </div>
-                    <Pagination
-                        currentPage={currentPage}
-                        productsPerPage={productsPerPage}
-                        totalProducts={ingredients.length}
-                        paginate={paginate}
-                        />
                     <button className="btn-check-recipe" onClick={showRecipes}> <a href='#matched-recipe'>Check matched Recipes</a></button>
                     {
                         matchRecipe.length==0 && flag &&

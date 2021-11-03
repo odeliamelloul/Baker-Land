@@ -105,7 +105,8 @@
     
    .bakerVideo
     {
-     height: max-content !important;
+      margin: 0 !important;
+     height: 55vw !important;
      -webkit-border-radius: 0 0 50vw 50vw !important;
      -khtml-border-radius: 0 0 50vw 50vw !important;
      -moz-border-radius: 0 0 50vw 50vw !important;

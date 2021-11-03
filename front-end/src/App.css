@@ -225,11 +225,13 @@ a{
   background-color: transparent;
 }
 .SmallCartBtn{
-  font-size: 15px !important;
-  background-color:rgb(5, 134, 255);
+  font-size: 18px !important;
+  background-color:rgb(167, 46, 106);
   font-weight: bold;
   color: aliceblue !important;
   border: none !important;
+  width: 45vw;
+  margin: 0 auto;
 }
 .btnPay{
   border:rgb(131, 23, 107) 1px solid;
@@ -337,6 +339,9 @@ h4{
 {
   width: 90vw !important;
 }
+h6 {
+  font-size: 1.8rem !important;
+}
 
 @media only screen and (max-width: 580px) { 
   .search-Box
@@ -355,9 +360,8 @@ h4{
   .navbar img
   {
     z-index: 2;
-    margin-left: 30%;
   }
   .centered-cart-qty {
-    left: 71%;
+    left: 52%;
   }
 }

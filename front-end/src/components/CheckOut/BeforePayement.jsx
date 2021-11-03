@@ -6,12 +6,13 @@ function BeforePayement (props) {
 
   const [openModal, setOpenModal] = useState(false)
   const handleShow = () => setOpenModal(props.openModal);
- console.log(props.openModal)
+  const handleClose=()=>setOpenModal(false);
+
 return(
       <div>
       <button onClick={handleShow} className="payCartBtn">Register Now </button>
             <Modal show={openModal}>
-                  <Modal.Header closeButton >
+                  <Modal.Header closeButton onClick={()=>handleClose()}>
                     {window.location.pathname==='/RecipeBook'?
                         <Modal.Title>
                            Before Create Recipe 

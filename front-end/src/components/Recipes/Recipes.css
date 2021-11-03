@@ -7,7 +7,7 @@
 }
 .ingredients>li
 {
-    font-size:18px;
+    font-size:16px;
     font-weight: 700;
     color: rgb(0, 81, 128);  
   
@@ -36,6 +36,7 @@
      color: rgb(199 125 83) !important;
     font-family: sans-serif !important;
     width:max-content;
+    font-size: 22px !important;
       
 }
 .description
@@ -54,8 +55,7 @@
     border: rgb(71 136 199) 1px solid;
     border-radius: 15px;
     background-color: white;
-    margin-top: 50px ;
-    margin-left: 10px;
+    margin: 20px auto;
     height: max-content;
 }
 .btnAddIng
@@ -68,12 +68,15 @@
 }
 .tips
 {
+    font-size: 16px ;
     text-align: justify;
     background-color: rgb(235, 241, 255);
+    
 }
 .tips>*
-{
-    margin-left: 10px;
+{ 
+   margin: 10px;
+
 }
 .book-name-recipe
 {
@@ -146,8 +149,7 @@
 } */
 .openModalBtn
 {
-    margin-right: 30px!important;
-    margin-bottom: 0;
+ width: max-content;
 }
 
 /* Pantry */
@@ -323,6 +325,11 @@ select
 .pantry>button>p{
     width: 100px;
     height: max-content;
+}
+.ingredients li,.steps li
+{
+    margin-left: 5px;
+    font-size: 16px !important;
 }
 @media only screen and (max-width: 678px) {
     

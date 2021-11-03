@@ -21,7 +21,7 @@ function ListRecipes({recipesType})
           <>
           {loading ? <Loader/>:
           <div className="wrapEasy">
-            <h1 className="headerR">Easy Recipes</h1>
+            <h1 className="headerR">{recipesType==="Easy"?"Easy recipes":"Chef recipes"}</h1>
             <div className="d-flex justify-content-between  wrap-easy-img" >
 
                {             
