@@ -11,6 +11,7 @@ import CarouselCart from "./CheckOut/CarouselCart";
 import OrderSummary from "./CheckOut/OrderSummary";
 import { listProducts, updateProduct } from "../actions/productActions";
 import { removeFromCart } from "../actions/cartActions";
+import emailjs from 'emailjs-com';
 
 
 
@@ -49,9 +50,25 @@ const OrderScreen = ({match}) => {
             document.body.appendChild(script)
          }
          
-         if(!order || successPay){
+         if(!order ||successPay){
              dispatch({type:ORDER_PAY_RESET})
              dispatch(getOrderDetails(orderId))
+
+         }
+
+         if(successPay)
+         {
+            var templateParams = {
+                name:order.user.name,
+                orderId:order._id,
+                email:order.user.email,
+                products:order.orderItems
+            };
+            emailjs.send('service_o2n4bpq', 'template_nsfz9w8', templateParams,"user_vLhhvBzlmb0caFnkYzt2q")
+            .then(function(response) {
+              alert("Order Completed")
+            }, function(error) {
+            });
          }
          else if(!window.paypal)
          {addPaypalScript() }
@@ -62,16 +79,16 @@ const OrderScreen = ({match}) => {
 
     }, [dispatch, orderId,successPay,order])
 
+
+
    const successPaymentHandler=(paymentResult)=>
    {
     dispatch(payOrder(orderId,paymentResult))
-    
 
     cartItems.forEach(cartEl => {
       
        let product= products.find((el)=>el._id===cartEl.id)
-        console.log(product);
-
+      //update qty of product that buyed
         dispatch(updateProduct({
            _id:product._id,
            image:product.image,
@@ -82,8 +99,10 @@ const OrderScreen = ({match}) => {
            description:product.description,
            countInStock: product.countInStock- cartEl.qty
        })) 
-       dispatch(removeFromCart(cartEl.id))
+       localStorage.setItem("cartItems",[])
        });
+
+
    }
 
 return (
@@ -120,7 +139,7 @@ return (
                             </ListGroup.Item> }
                          </div>  
                          {!order.isPaid &&
-                    <CarouselCart/>  }
+                    <CarouselCart cartItemsByOrder={order.orderItems}/>  }
             </div>
                 
             </div>}

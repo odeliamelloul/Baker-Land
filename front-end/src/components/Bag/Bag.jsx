@@ -31,13 +31,14 @@ function Bag(props) {
     return ( 
        
         <div className="Cart"> 
-             <HeaderStatus/>
+            
              { cartItems.length===0?
-             <div className ="bg-light">
-                 <p>your shoping Cart is Empty </p>
+             <div>
+                 <h4>your shoping Cart is Empty </h4>
                  <Link to="/Catalog">Go to Shop page &#8608;</Link>
              </div>:
             <div className=" d-flex flex-column wrapCart">
+               <HeaderStatus/>
             <div className="d-flex flex-column wrapDetails" >
               {/* <div className="cart-header">
                   <div className="d-flex headerItem">

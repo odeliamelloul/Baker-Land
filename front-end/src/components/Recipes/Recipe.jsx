@@ -9,15 +9,13 @@ import { getUserDetails, updateUserProfile } from '../../actions/userActions'
 export default function Recipe({match}) {
   
   const[showModal,setShowModal]=useState(false)
-  const [recipe, setRecipe] = useState({})
   const showIngModal=()=> {setShowModal(true) }
   
   const recipesList=useSelector(state=>state.recipesList)
   const{loading,error,recipes}=recipesList
-
   const userDetails=useSelector((state)=>state.userDetails)
   const {loading:loadingUser,user}=userDetails
-
+  let recipe=[]
   const dispatch = useDispatch()
   useEffect(() => {
          
@@ -25,12 +23,17 @@ export default function Recipe({match}) {
       dispatch(getUserDetails('profile'))
       }
       dispatch(listRecipes())
-
-      if(recipes)
-       setRecipe(recipes.find((item)=> item.name===match.params.id.replaceAll("-"," ")))
  
-}, [])
-   
+}, [loading])
+
+
+if(recipes.length>0)
+{
+  console.log(recipes)
+  recipe=recipes.find((item)=> item.name===match.params.id.replaceAll("-"," "))
+   console.log(recipe)
+}
+
 const addRecipeToBook=(id)=>
 {
   user.myRecipe=[...user.myRecipe,id]                                                                                                                                                                                                                            
@@ -39,7 +42,7 @@ const addRecipeToBook=(id)=>
 
     return (
       <>
-      {loading || !recipes ? <Loader/>:
+      {loading ? <Loader/>:
         <div className="d-flex flex-column">
              
              <div  className="wrapRecipe">

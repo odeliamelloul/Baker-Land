@@ -52,7 +52,7 @@ function SignUp(props)
     const emailChange=()=>
     {
         
-        if(!/^[a-zA-z0-9]+@gmail\.com$/.test(email.current.value))
+        if(!/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email.current.value))
         {
             email.current.style.border="red solid 1px";
             if(email.current.value==="")
@@ -84,13 +84,13 @@ function SignUp(props)
     //phone
     const phoneChange=()=>
     {
-      if(!/^[0-9]{3}\-[0-9]{7}$/.test( phone.current.value))
+      if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test( phone.current.value))
       {
           phone.current.style.border="red solid 1px";
           if(phone.current.value==="")
           setErrPhone("Please Enter a phoneNumber")
           else
-          setErrPhone("Phone:10 digit in format xxx-xxxxxxx")
+          setErrPhone("Please Enter a Correct phoneNumber")
       }
       else{
           phone.current.style.border="black solid 1px";

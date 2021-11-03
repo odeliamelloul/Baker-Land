@@ -2,13 +2,13 @@ import React, { useState,useEffect} from "react";
 import { useSelector } from "react-redux";
 import Carousel from "../Carousel";
 
-const CarouselCart = () => {
+const CarouselCart = ({cartItemsByOrder}) => {
     const [newCart, setNewCart] = useState([])
     const cart=useSelector(state=>state.cart)
     let NewCart=[]
 
         
-        let myCart=cart.cartItems
+        let myCart=cartItemsByOrder?cartItemsByOrder:cart.cartItems
         let rest=myCart.length%3
 
         for (let j=0;j<myCart.length-rest;j++)

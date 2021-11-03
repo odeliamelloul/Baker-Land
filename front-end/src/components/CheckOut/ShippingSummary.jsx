@@ -26,6 +26,7 @@ import { useSelector } from 'react-redux';
 
     const goToPayment=()=>
     {
+      console.log(cart.shippingPrice)
         if(cart.shippingAddress.address &&
           cart.shippingAddress.city &&
           cart.shippingAddress.postalCode &&
@@ -36,7 +37,11 @@ import { useSelector } from 'react-redux';
             history.push("/PaymentMethod")
           }
 
-        else{setErrorMsg("please choose Shipping method")}
+        else{
+          if(cart.shippingPrice==-1)
+          setErrorMsg("please choose Shipping method")  
+          else setErrorMsg("please enter correct delivery adress")
+        }
     }
 
     useEffect(() => {
@@ -44,7 +49,9 @@ import { useSelector } from 'react-redux';
          setErrorMsg("")
          
     }, [cart.shippingPrice])
+
     
+
     let SumShipping= cart.shippingPrice==-1?0:cart.shippingPrice
     const emptyCoupon={value:0,name:""}
     let {value,name}=coupon!==undefined? coupon :emptyCoupon

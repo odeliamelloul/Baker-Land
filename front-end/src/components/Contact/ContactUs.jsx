@@ -51,7 +51,7 @@ class ContactUs extends React.Component
 
     emailChange=()=>
     {
-        if(!/^[a-zA-z0-9]+@gmail\.com$/.test(this.email.current.value))
+        if(!/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(this.email.current.value))
         {
             this.flag=false
             this.email.current.style.border="red solid 1px";
@@ -72,14 +72,14 @@ class ContactUs extends React.Component
     //phone
     phoneChange=()=>
     {
-      if(!/^[0-9]{3}\-[0-9]{7}$/.test( this.phone.current.value))
+      if(!/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test( this.phone.current.value))
       {
           this.flag=false
           this.phone.current.style.border="red solid 1px";
           if(this.phone.current.value==="")
           this.setState({errPhone:"Please Enter a phoneNumber"})
           else
-          this.setState({errPhone:"*10 digit in this format xxx-xxxxxxx"})
+          this.setState({errPhone:"phone number is not correct"})
 
       }
       else{

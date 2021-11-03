@@ -11,7 +11,7 @@ function IngModal(props) {
 
   const productsList=useSelector(state=>state.productList)
   const{loading,error,products}=productsList
-
+  const toShop=props.toShop?props.toShop:[]
   const cart = useSelector((state) => state.cart)
   const dispatch = useDispatch()
 
@@ -23,8 +23,8 @@ function IngModal(props) {
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
     
-    const arrToShop=products.filter((item)=> props.toShop.includes(item.name.toLowerCase()))
-    console.log(products)
+    const arrToShop=products.length>0?products.filter((item)=>toShop.includes(item.name.toLowerCase())):[]
+    
     console.log(props.toShop)
  
 

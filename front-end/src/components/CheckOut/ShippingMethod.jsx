@@ -11,14 +11,17 @@ function ShippingMethod({getSumShipping,sum}) {
     
     useEffect(() => {
      
-    if(!checkMethod)
+    if(checkMethod===false)
        getSumShipping(-1)
         else
        getSumShipping(SumShipping)
 
+        console.log(checkMethod)
     }, [checkMethod,SumShipping])
 
     const methodChanged = (e) => {
+      
+      console.log(checkMethod)
       setCheckMethod(true)
         if (e.currentTarget.value === "standard") {
           if (sum < 35) setSumShipping( 2 );

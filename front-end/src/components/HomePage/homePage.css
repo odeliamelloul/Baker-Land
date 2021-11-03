@@ -25,9 +25,9 @@
   
   }
 
-  .carousel-item video
+  .bakerVideo
   {
-    height:600px;
+    height:max-content;
     width: 100vw;
     background-size:contain;
   }
@@ -94,13 +94,12 @@
 
 
 
-  @media only screen and (max-width: 660px) {
+  @media  screen and (max-width: 770px) {
     
-   .carousel-item video
+   .bakerVideo
     {
      height: max-content;
-     border-bottom-left-radius: 50vw;
-     border-bottom-right-radius:50vw;
+     border-radius: 0 0 50vw 50vw !important;
     }
     .home-Recipe
     {
@@ -122,7 +121,7 @@
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media  screen and (max-width: 500px) {
     
 
     .home-Recipe

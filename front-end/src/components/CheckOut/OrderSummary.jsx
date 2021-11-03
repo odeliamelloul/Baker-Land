@@ -7,7 +7,10 @@ const OrderSummary = () => {
     const {order,loading,error}=orderDetails
 
     let coupon,shippingPrice
-    let cartItemsPrice=Math.round(cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0))
+
+    let cartItemsPrice=order?Math.round(order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0))
+    :Math.round(cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0))
+
 
     if(window.location.pathname==="/PaymentMethod")
    {
