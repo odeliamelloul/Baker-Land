@@ -34,7 +34,7 @@ function SignIn (props)
         e.preventDefault()
 
            dispatch(login(email.current.value,Password.current.value))
-           if(!error){
+           if(error){
              dispatch(getUserDetails('profile'))
               setMsg("SignIn Succesfully")
               if(lastPathName==="RecipeBook")

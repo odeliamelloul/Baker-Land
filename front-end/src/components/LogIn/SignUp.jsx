@@ -111,7 +111,7 @@ function SignUp(props)
         if( errorName===""&& errorMail==="" && errorPhone==="" && errorPassword==="") 
         {   setFlag(true)
             dispatch(register(userName.current.value,email.current.value,password.current.value,phone.current.value))
-            if(!error)
+            if(error)
             {
                 setsuccesMsg(<h4>sign Up succesfully</h4>)
                 userName.current.value=""
@@ -119,7 +119,6 @@ function SignUp(props)
                 phone.current.value=""
                 password.current.value=""
                 window.history.back();
-               
            }
 
 
