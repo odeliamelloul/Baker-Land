@@ -30,7 +30,7 @@ const CarouselBookRecipe = () => {
         }, [loading])
         
         
-        if(user.myRecipe && recipes)
+        if(user && user.myRecipe && recipes)
             myRecipe = recipes.filter((recipe)=>user.myRecipe.includes(recipe._id))
 
         let rest=myRecipe.length%2

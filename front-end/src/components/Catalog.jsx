@@ -52,10 +52,10 @@ function Catalog(props)
               
                <div div className="container-Products" width="100%">
               { loading ? <Loader/>:
-              // <p className="p-5" style={{color:"white"}}>Sorry there is no matching product for your search</p>
+             currentProducts.length===0 ?<p className="p-5" style={{color:"white"}}>Sorry there is no matching product for your search</p>:
               currentProducts.map((p)=> <Card  id={p._id} name={p.name} price={p.price} image={p.image} weight={p.weight} />
-              )} 
-
+              )
+          }
             </div>
           </div>
           <Pagination

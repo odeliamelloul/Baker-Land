@@ -19,7 +19,7 @@ function Shipping(props) {
     return (
         <div>
             <HeaderStatus/>
-            <div  className="wrap-shipping flex-wrap d-flex justify-content-between">
+            <div  className="wrap-shipping flex-wrap d-flex w-max ">
                 <div className="shipping">
                     <Adress />
                 </div>

@@ -5,7 +5,7 @@ import {Row,Col} from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import { addToCart } from "../../actions/cartActions"
 
-function SignIn ({history})
+function SignIn (props)
 {
     const email = useRef();
     const Password=useRef();
@@ -14,10 +14,10 @@ function SignIn ({history})
 
     const userLogin=useSelector(state=>state.userLogin)
     const {loading,error,userInfo}=userLogin
-
+    
+    let lastPathName= props.location.state && props.location.state.name ?props.location.state.name:""
 
   useEffect(() => {
-  
   if(!loading && userInfo && userInfo.cart)
   {
     userInfo.cart.forEach((product)=>
@@ -30,9 +30,6 @@ function SignIn ({history})
 
 }, [loading,userInfo])
 
-
-
-
       const submitForm=(e)=>{
         e.preventDefault()
 
@@ -40,7 +37,13 @@ function SignIn ({history})
            if(!error){
              dispatch(getUserDetails('profile'))
               setMsg("SignIn Succesfully")
-              window.history.back();
+              if(lastPathName==="RecipeBook")
+              {
+                props.history.push("/RecipeBook")
+              }else{
+                window.history.back();
+              }
+              
             }
         }
     

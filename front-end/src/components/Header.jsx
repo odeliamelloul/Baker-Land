@@ -14,7 +14,7 @@ function Header(props)
 
    const [showSmallCart, setShowSmallCart] = useState(false)
    const [classLogIn, setClassLogIn] = useState("d-none")
-   const [collapse, setCollapse] = useState("d-none")
+   const [collapse, setCollapse] = useState("")
    const [classModal, setClassModal] = useState("d-none")
    
    const dispatch = useDispatch()
@@ -49,7 +49,10 @@ function Header(props)
       dispatch(updateUserProfile({id:userInfo._id,cart:cartItems}))
       dispatch(logout())
     }
+    const collapseNavbar=()=>
+    {
 
+    }
         return(
 
             <div>
@@ -84,7 +87,7 @@ function Header(props)
                       <li><hr className="dropdown-divider"/></li>
                       <li><Link className="dropdown-item"
                        to={{pathname: userInfo && userInfo.length!==0?
-                        "/RecipeBook":"/SignIn"}}>Your recipes book</Link></li>
+                        "/RecipeBook":"/SignIn" , state:{name:"RecipeBook"}}}>Your recipes book</Link></li>
                     </ul>
                   </li>
 
@@ -122,7 +125,7 @@ function Header(props)
                  </ul> 
                  :
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><Link className="dropdown-item" to={{pathname:"/SignIn"}} >SignIn</Link></li>
+                      <li><Link onClick={collapseNavbar} className="dropdown-item" to={{pathname:"/SignIn"}} >SignIn</Link></li>
                       <li><Link className="dropdown-item"  to={{pathname:"/SignUp"}} >SignUp</Link></li>
                   </ul> 
                 }

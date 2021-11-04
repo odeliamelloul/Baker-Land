@@ -5,7 +5,7 @@ import { AnimateOnChange } from "react-animation"
 import {useDispatch,useSelector} from 'react-redux'
 import { register } from "../../actions/userActions";
 
-function SignUp({history})
+function SignUp(props)
 { 
     const [errorName,setErrName]=useState("")
     const [errorMail,setErrMail]=useState("")
@@ -111,7 +111,7 @@ function SignUp({history})
         if( errorName===""&& errorMail==="" && errorPhone==="" && errorPassword==="") 
         {   setFlag(true)
             dispatch(register(userName.current.value,email.current.value,password.current.value,phone.current.value))
-            if(error)
+            if(!error)
             {
                 setsuccesMsg(<h4>sign Up succesfully</h4>)
                 userName.current.value=""
@@ -119,6 +119,7 @@ function SignUp({history})
                 phone.current.value=""
                 password.current.value=""
                 window.history.back();
+               
            }
 
 

@@ -16,10 +16,14 @@ export default function Recipe({match,history}) {
   const{loading,error,recipes}=recipesList
   const userDetails=useSelector((state)=>state.userDetails)
   const {loading:loadingUser,user}=userDetails
+  const userLogin=useSelector(state=>state.userLogin)
+  const {userInfo}=userLogin
+
   let recipe=[]
   const dispatch = useDispatch()
+
   useEffect(() => {
-         
+    
     if(!loadingUser){
       dispatch(getUserDetails('profile'))
       }
@@ -37,13 +41,14 @@ if(recipes.length>0)
 
 const addRecipeToBook=(id)=>
 {
-  
-if(user &&user.length>0)
- {setRecipeAdded(true) 
-  user.myRecipe=[...user.myRecipe,id]                                                                                                                                                                                                                            
-  dispatch(updateUserProfile({id:user._id,myRecipe:user.myRecipe}))}
-  else{
-    history.push("/SignIn")
+  console.log(user)
+if(user)
+ {
+    setRecipeAdded(true) 
+    user.myRecipe=[...user.myRecipe,id]                                                                                                                                                                                                                            
+    dispatch(updateUserProfile({id:user._id,myRecipe:user.myRecipe}))
+ } else {
+    history.push({pathname:"/SignIn",state:{name:window.location.pathname}})
   }
 }
 

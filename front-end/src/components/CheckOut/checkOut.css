@@ -225,7 +225,11 @@ hr.vertical {
     width: max-content;
 }
 
-
+.wrap-shipping
+{
+    width: max-content;
+    margin: 0 auto;
+}
 /* shipping */
 .shipping table td input 
 {
@@ -297,6 +301,11 @@ hr.vertical {
 }
 
 @media only screen and (max-width: 589px) {
+    .wrap-shipping
+{
+    width: 100vw;
+    margin: 0 auto;
+}
         .width-item-order
         {
             width: 100vw !important;
