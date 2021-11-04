@@ -1,7 +1,7 @@
 import React ,{useState,useContext,useEffect} from "react"
 import {NavLink, Link} from "react-router-dom"
 import CartModal from "./CartModal"
-import logo from "./../NewLogo.png"
+import logo from "./../logo.PNG"
 import { logout, updateUserProfile } from '../actions/userActions';
 import {useDispatch,useSelector} from 'react-redux';
 import SearchBox from "./SearchBox";
