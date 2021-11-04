@@ -1,11 +1,11 @@
 
-import React,{ useContext,useState,useRef } from "react"
+import React,{ useEffect,useState,useRef } from "react"
 import {withRouter} from 'react-router-dom';
 import { AnimateOnChange } from "react-animation"
 import {useDispatch,useSelector} from 'react-redux'
 import { register } from "../../actions/userActions";
 
-function SignUp(props)
+function SignUp({history})
 { 
     const [errorName,setErrName]=useState("")
     const [errorMail,setErrMail]=useState("")
@@ -22,7 +22,10 @@ function SignUp(props)
       let phone=useRef()
 
       const[succesMsg,setsuccesMsg]=useState("")
-      
+
+      useEffect(() => {
+      }, [loading,userInfo])
+
     //name
    const nameChange=()=>
     {
@@ -68,13 +71,13 @@ function SignUp(props)
      //password
     const passwordChange=()=>
       {
-        if( !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password.current.value) )
+        if( !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(password.current.value) )
         {
             password.current.style.border="red solid 1px";
             if(password.current.value==="")
             setErrPassword("Please Enter a password")
             else
-            setErrPassword("Password:Minimum 8 characters, at least one letter, one number and one special character:")
+            setErrPassword("Password:Minimum 6 characters, at least one letter, one number and one special character:")
         }
         else{
             password.current.style.border="black solid 1px";
@@ -99,40 +102,25 @@ function SignUp(props)
       }
     }
     
-    const ShowNotification=()=>
-    {
-        const notification=new Notification ("New Message from Baker Land!",{
-            body:"Are you accept to open camera?"
-        })
-    }
+
 
 
     const sendForm=(e)=>{
         e.preventDefault();
         nameChange();emailChange(); passwordChange(); phoneChange();
-        if(errorName===""&& errorMail==="" && errorPhone==="" && errorPassword==="") 
+        if( errorName===""&& errorMail==="" && errorPhone==="" && errorPassword==="") 
         {   setFlag(true)
             dispatch(register(userName.current.value,email.current.value,password.current.value,phone.current.value))
-            setsuccesMsg(<h4>sign Up succesfully</h4>)
-            userName.current.value=""
-            email.current.value=""
-            phone.current.value=""
-            password.current.value=""
-           
-            if(Notification.permission==="granted")
-            ShowNotification()
-            else if(Notification.permission !=="denied")
+            if(error)
             {
-                Notification.requestPermission().then(
-                    permission=>
-                    {
-                        if(permission==="granted")
-                        {
-                            ShowNotification() 
-                        }
-                    }
-                )
-            }
+                setsuccesMsg(<h4>sign Up succesfully</h4>)
+                userName.current.value=""
+                email.current.value=""
+                phone.current.value=""
+                password.current.value=""
+                window.history.back();
+           }
+
 
         }
     }
@@ -142,7 +130,7 @@ function SignUp(props)
    return (
     <div>
         <h1>Sign Up</h1>
-       { ErrorArray.length>0 && 
+       {!error && ErrorArray.length>0 && 
        <div className="ErrForm">
             <ul> {ErrorArray.map(item=><li>{item}</li>)}</ul>
         </div>}
@@ -157,11 +145,12 @@ function SignUp(props)
             <label>Phone Number</label>
             <input onChange={phoneChange} ref={phone} type="phone" placeholder="050-1132222311"/>
             <button  type="submit" className="signBtn">Sign Up</button>
-            {(succesMsg==="" && flag) &&
+            {(succesMsg==="" && flag && !error) &&
             <AnimateOnChange>
                 check your form...
             </AnimateOnChange>}
             {succesMsg}
+            { error && <spaan className="ErrForm">This email already exist in the system</spaan>}
         </form>
     </div>
 )

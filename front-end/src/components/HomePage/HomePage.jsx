@@ -46,7 +46,7 @@ function HomePage(){
        <div className="wrap-homePage">
 
         {/* <img className="img-principal" src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" /> */}
-
+        <div className="home-btn-shop d-md-none" > <Link   to={{pathname:"/Catalog"}}>Shop Now !</Link><br /></div>
 
               <Carousel id="carouselExampleControls7">
                        <div className="carousel-item">
@@ -83,7 +83,7 @@ function HomePage(){
              </Carousel>
       
               <p className="centered fs-3">Engaged  in the joy  of baking , With us anyone can  make chef recipes !</p>  
-
+              
             <div className="home-Recipe d-flex">
               <Link  to={{pathname:"/Chef-Recipe"}}><img src="https://realfood.tesco.com/Media/images/RFO-636x418-Raspberry-ice-cream-cake-34942a7b-13cf-44c6-a8b3-4179b7bd70f8-0-636x418.jpg" alt="" /><h6 className="nameRecipes">Chef-Recipe</h6></Link>
               <Link  to={{pathname:"/Easy"}}> <img  src="https://tse1.mm.bing.net/th?id=OIP.ufP1m19On8Tq4JC-mt6l6QHaEK&pid=Api&P=0&w=312&h=177" /><h6 className="nameRecipes">Easy-Recipe</h6> </Link>

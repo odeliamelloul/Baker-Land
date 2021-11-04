@@ -52,14 +52,15 @@ function Header(props)
 
         return(
 
-            <div>  
+            <div>
+               <img width="130px" height="80px" src={logo} alt="" />  
               <nav className="navbar navbar-expand-lg navbar-light">
               <div className="container-fluid m-0">
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-               <img width="130px" height="80px" src={logo} alt="" /> 
-               <Route render={({history})=><SearchBox history={history}/>}/>
+               
+               <Route  render={({history})=><SearchBox history={history}/>}/>
 
               <div  className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav  navbar-collapse justify-content-center  me-auto mb-2 mb-lg-0">
@@ -107,11 +108,11 @@ function Header(props)
                       <li><Link className="dropdown-item" to={{pathname:"/admin/productList"}}>Products</Link></li>
                       <li><Link className="dropdown-item" to={{pathname:"/admin/orderList"}}>Orders</Link></li>
                     </ul>
-                  </div>)}
+                  </div>)}</div> 
                <div className="dropdown" >
-               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               <a className="nav-link dropdown-toggle p-0 m-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                  <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/40/83176B/external-user-user-flatart-icons-outline-flatarticons-15.png"/></a>
+                  <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/32/83176B/external-user-user-flatart-icons-outline-flatarticons-15.png"/></a>
                   {
                   userInfo && userInfo.length!==0 ?
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -126,16 +127,15 @@ function Header(props)
                   </ul> 
                 }
               </div>    
-              </div> 
                  <Link to={{pathname:"/Bag"}} className="container-bag">
                           <button className= "openCartBtn" onClick={handleCloseModalSmallCart} onMouseOver={handleShowModalSmallCart}>
-                            <img src="https://img.icons8.com/83176B/ios-filled/40/shopping-bag.png"/>
+                            <img src="https://img.icons8.com/83176B/ios-filled/32/shopping-bag.png"/>
                             <p className="centered-cart-qty">{cartItems.map((item)=>item.qty).reduce((prev,next)=>prev+next,0)}</p>
                           </button>
                   </Link>      
             </div>
-    
           </nav>
+               
           {
            (window.location.pathname!=="/Bag" &&  cartItems.length>0)&&
             <div className={`cartModal ${classModal}`} onClick={handleCloseModalSmallCart} onMouseLeave={handleCloseModalSmallCart}>

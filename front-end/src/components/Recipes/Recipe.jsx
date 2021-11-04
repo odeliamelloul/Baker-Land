@@ -31,7 +31,7 @@ export default function Recipe({match,history}) {
 if(recipes.length>0)
 {
   console.log(recipes)
-  recipe=recipes.find((item)=> item._id===match.params.id)
+  recipe=recipes.find((item)=> item.name===match.params.id.replaceAll("-"," "))
    console.log(recipe)
 }
 

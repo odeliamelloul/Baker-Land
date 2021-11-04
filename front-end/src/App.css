@@ -209,12 +209,11 @@ a{
 
 }
 .navbar {
- padding-top: unset !important;
- padding-bottom: unset !important;
+ box-sizing: unset;
 }
 .form-control
 {
-  width: 130px!important;
+  width: 100px!important;
   margin-right: 5px;
 }
 
@@ -346,12 +345,17 @@ h6 {
 {
   background-color: rgb(248, 233, 233);
 }
+ .navbar-toggler {
+  
+  border-color: rgb(136 ,46 ,79) !important;
+  background-color: #faf6ee !important; 
+}
 
 @media only screen and (max-width: 580px) { 
-  .search-Box
+  /* .search-Box
   {
     display: none !important;
-  }
+  } */
   .cartModal
   {
     display: none !important;
