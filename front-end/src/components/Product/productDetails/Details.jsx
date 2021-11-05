@@ -108,9 +108,9 @@ function ProductDetails (props) {
             <button className="btnAdd" onClick={()=>addProductToCart()}>
               <i className="fa fa-shopping-cart"></i> Add to cart
             </button>
-            <button className="btnAdd">
+            {/* <button className="btnAdd">
               <i className="fa fa-heart-o"></i> Add to favorites
-            </button>
+            </button> */}
             <StarAnimation />
           </div>
         </div>

@@ -2,7 +2,7 @@ const ingredients=
 
     [
         {
-            "name": "Self Raising Flour",
+            "name": "self raising flour",
             "image": "https://cdn.squires-kitchen.com/products/images/1100/7baefc1a-e653-40f9-8ab5-49cd362c6792.jpg"
         },
         {
