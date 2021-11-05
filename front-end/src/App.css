@@ -193,6 +193,7 @@ a{
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(247, 226, 226);
+  font-size: 13px !important 
 }
 
 .logInBtn{
@@ -222,6 +223,22 @@ a{
   border:rgb(131, 23, 107) 1px solid;
   border-radius: 10%;
   background-color: transparent;
+}
+.Link-SignUp
+{
+  width: max-content;
+  padding: 0;
+  background-color: #ffe2b1;
+  border-radius: 10%;
+  animation: moveBtn 2s infinite;
+  animation-fill-mode: forwards; 
+  -webkit-animation-fill-mode: forwards;
+  color: rgb(167 39 138);
+  font-weight: 500;
+}
+@keyframes moveBtn {
+  100%{padding: 15px;
+    font-weight: 800;}
 }
 .SmallCartBtn{
   font-size: 18px !important;
@@ -369,7 +386,5 @@ h6 {
   {
     z-index: 2;
   }
-  .centered-cart-qty {
-    left: 52%;
-  }
+
 }

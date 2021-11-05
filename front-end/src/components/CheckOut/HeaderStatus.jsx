@@ -3,7 +3,7 @@ import './checkOut.css'
 function HeaderStatus() {
     
     const pathName = window.location.pathname;
-    const StatusArr=[["/Bag","Cart"],["/Shipping","Adress"],["/PaymentMethod","Payment"],["order","Completed"]]
+    const StatusArr=[["/Bag","Cart"],["/Shipping","Shipping Adress"],["/PaymentMethod","Payment"],["order","Order Completed"]]
     
     const [ValueActive, setValueActive] = useState([])
 

@@ -34,7 +34,7 @@ function Bag(props) {
             
              { cartItems.length===0?
              <div className="p-5">
-<img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-empty-cart-essential-collection-bearicons-gradient-bearicons.png"/>
+                  <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-empty-cart-essential-collection-bearicons-gradient-bearicons.png"/>
                  <h4>your shoping Cart is Empty </h4>
                  <Link className="home-btn-shop bg-light p-0" to="/Catalog">Go to Catalog &#8608;</Link>
              </div>:

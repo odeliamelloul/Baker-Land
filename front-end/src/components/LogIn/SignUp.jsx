@@ -4,6 +4,7 @@ import {withRouter} from 'react-router-dom';
 import { AnimateOnChange } from "react-animation"
 import {useDispatch,useSelector} from 'react-redux'
 import { register } from "../../actions/userActions";
+import Loader from "../Loader";
 
 function SignUp(props)
 { 
@@ -111,14 +112,14 @@ function SignUp(props)
         if( errorName===""&& errorMail==="" && errorPhone==="" && errorPassword==="") 
         {   setFlag(true)
             dispatch(register(userName.current.value,email.current.value,password.current.value,phone.current.value))
-            if(error)
+            if(!error)
             {
                 setsuccesMsg(<h4>sign Up succesfully</h4>)
                 userName.current.value=""
                 email.current.value=""
                 phone.current.value=""
                 password.current.value=""
-                window.history.back();
+
            }
 
 
@@ -145,12 +146,12 @@ function SignUp(props)
             <label>Phone Number</label>
             <input onChange={phoneChange} ref={phone} type="phone" placeholder="050-1132222311"/>
             <button  type="submit" className="signBtn">Sign Up</button>
-            {(succesMsg==="" && flag && !error) &&
+            {loading &&
             <AnimateOnChange>
                 check your form...
             </AnimateOnChange>}
-            {succesMsg}
-            { error && <spaan className="ErrForm">This email already exist in the system</spaan>}
+            { error ? <spaan className="ErrForm">This email already exist in the system</spaan>
+            : succesMsg}
         </form>
     </div>
 )

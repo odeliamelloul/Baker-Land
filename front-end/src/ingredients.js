@@ -2,8 +2,8 @@ const ingredients=
 
     [
         {
-            "name": "white flour",
-            "image": "https://cdn.squires-kitchen.com/products/images/550/3827fe08-8ab7-409b-baaa-c1091af33788.jpg"
+            "name": "Self Raising Flour",
+            "image": "https://cdn.squires-kitchen.com/products/images/1100/7baefc1a-e653-40f9-8ab5-49cd362c6792.jpg"
         },
         {
             "name": "plain flour",
@@ -48,6 +48,10 @@ const ingredients=
         {
             "name": "brown sugar",
             "image": "https://tse1.mm.bing.net/th?id=OIP.M8T1cD_Hg1nUwS7FmR8e6QEhDX&pid=Api&P=0&w=216&h=162"
+        },
+        {
+            "name": "salt",
+            "image": "https://tse1.mm.bing.net/th?id=OIP.gEhCA7SzStSbcNrCRBlvWQHaJa&pid=Api&P=0&w=300&h=300"
         },
         {
             "name": "vanila powder",
@@ -140,6 +144,10 @@ const ingredients=
             "image": "https://cdn.shopify.com/s/files/1/1143/3886/products/500-mad-bourb-vanilla-extract-60ml_1400x1400_crop_center.jpg?v=1522431303"
         },
         {
+            "name": "vanilla extract",
+            "image": "https://cdn.shopify.com/s/files/1/1143/3886/products/652_natural_french_vanilla_extract_ws_2oz_front_1400x1400_crop_center.jpg?v=1625064964"
+        },
+        {
             "name": "natural blood orange extract water soluble",
             "image": "https://cdn.shopify.com/s/files/1/1143/3886/products/1172_natural_blood_orange_ws_118ml_extract_04947c30-f423-4da7-beac-5e9767b6babd_1400x1400_crop_center.jpg?v=1552930611"
         },
@@ -183,6 +191,44 @@ const ingredients=
         {
             "name": "maple syrup ",
             "image": "https://tse4.mm.bing.net/th?id=OIP.AlPMP65lbvGwWhZMB1K38QHaHa&pid=Api&P=0&w=300&h=300"
+        },
+        {
+            "name": "sultanas ",
+            "image": "https://tse3.mm.bing.net/th?id=OIP.VbgJKaSR6YtAu8ADigPj3gHaHa&pid=Api&P=0&w=300&h=300"
+        },
+ 
+        {
+            "name": "banana ",
+            "image": "https://tse4.mm.bing.net/th?id=OIP.TNxxAzdHi3duqlnyyH7pygHaFB&pid=Api&P=0&w=236&h=161"
+        },
+        {
+            "name": "lemon",
+            "image": "https://tse4.mm.bing.net/th?id=OIP.FCqrlVH_GJniLRRqWbSVvQHaE8&pid=Api&P=0&w=274&h=184"
+        },
+        {
+            "name": "strawberry",
+            "image": "https://tse4.mm.bing.net/th?id=OIP.bAh4-vp2VUrUydQduNaJFwHaHa&pid=Api&P=0&w=300&h=300"
+        },
+        {
+            "name": "apple",
+            "image": "https://tse1.mm.bing.net/th?id=OIP.cuKCrchtpgCNMFuYEwMmigHaF5&pid=Api&P=0&w=218&h=175"
+        },
+
+        {
+            "name": "peach",
+            "image": "https://tse3.mm.bing.net/th?id=OIP.9LmEKGScy0wJ3GDGqIe9pwHaGM&pid=Api&P=0&w=228&h=191"
+        },
+        {
+            "name": "fig",
+            "image": "https://tse3.mm.bing.net/th?id=OIP.ZP50zOB6tFpNxhQlSUHSnAHaDt&pid=Api&P=0&w=321&h=161"
+        },
+        {
+            "name": "pear",
+            "image": "https://tse1.mm.bing.net/th?id=OIP.8N7nv7U3FqGx3MgvDezKowHaKg&pid=Api&P=0&w=300&h=300"
+        },
+        {
+            "name": "orange",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.SgFmLgvnZKxMwO4bdzn8xgHaKH&pid=Api&P=0&w=300&h=300"
         },
  
 ]
