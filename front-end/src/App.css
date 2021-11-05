@@ -388,3 +388,18 @@ h6 {
   }
 
 }
+@media only screen and (max-width: 850px) { 
+  .userProfile .formSign{
+    width: 90vw !important ;
+    padding: 0;
+    margin-left: 2vw;
+  }
+
+  .all-my-orders button{
+    font-size: 12px!important;
+  }
+  .userProfile
+  {
+    margin: 0;
+  }
+}

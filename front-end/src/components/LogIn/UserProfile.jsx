@@ -127,7 +127,7 @@ function UserProfile() {
    let ErrorArray=[errorName,errorMail,errorPassword,errorPhone].filter((item)=>item!=="") 
 
    return (
-    <div className="d-flex userProfile">
+    <div className="d-flex flex-wrap userProfile">
         <div>
             <h2>User Profile</h2>
         { ErrorArray.length>0 && 
@@ -156,13 +156,13 @@ function UserProfile() {
 
         <div >
           <h2>MY ORDERS</h2>
-          <div className="d-flex flex-column formSign">
+          <div className="d-flex flex-column formSign all-my-orders">
            {loadingOrders ?<Loader/> :errorOrders? <p>{errorOrders}</p>
            :
-           <table>
+           <table >
              <thead>
                  <tr>
-                     <th>ID</th>
+                     <th className="d-none d-lg-block">ID</th>
                      <th>DATE</th>
                      <th>TOTAL</th>
                      <th>PAID</th>
@@ -174,7 +174,7 @@ function UserProfile() {
                  {orders.map(order=>
                     (
                         <tr key={order._id}>
-                            <td>{order._id}</td>
+                            <td className="d-none d-lg-block">{order._id}</td>
                             <td>{order.createdAt.substring(0,10)}</td>
                             <td>{order.totalPrice}</td>
                             <td>{order.isPaid?order.paidAt.substring(0,10):(
