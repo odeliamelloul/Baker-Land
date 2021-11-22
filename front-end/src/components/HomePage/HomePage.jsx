@@ -81,7 +81,7 @@ function HomePage(){
              </Carousel>
               
               <p className="centered fs-3">Engaged  in the joy  of baking , With us anyone can  make chef recipes !</p>  
-               <div className="home-btn-shop d-md-none" > <Link   to={{pathname:"/Catalog"}}>Shop Now !</Link></div>
+               <div className="home-btn-shop" > <Link   to={{pathname:"/Catalog"}}>Shop Now !</Link></div>
               
             <div className="home-Recipe d-flex">
               <Link  to={{pathname:"/Chef-Recipe"}}><img src="https://realfood.tesco.com/Media/images/RFO-636x418-Raspberry-ice-cream-cake-34942a7b-13cf-44c6-a8b3-4179b7bd70f8-0-636x418.jpg" alt="" /><h6 className="nameRecipes">Chef-Recipe</h6></Link>
@@ -91,7 +91,7 @@ function HomePage(){
               <img src="https://tse2.mm.bing.net/th?id=OIP.Mm-JksN5iN10bM97dhfynAHaFk&pid=Api&P=0&w=216&h=163" alt="" />
               <h6 className="nameRecipes">Your Recipe Book</h6></Link>
             </div>
-            <div className="home-Products d-flex">
+            {/* <div className="home-Products d-flex">
              {arrRandom.length>0 &&
              <Link className="btn-home-products" to={{pathname:"/Catalog"}}>Shop Now</Link>}  
                     <div className="shop-now d-flex">
@@ -100,7 +100,7 @@ function HomePage(){
                         <img src={product.image} alt="" />
                         )}</div>
                     </div>
-            </div>
+            </div> */}
         </div>}
           </>
         )

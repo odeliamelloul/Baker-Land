@@ -52,7 +52,7 @@ class Footer extends React.Component {
                                     </div>
 
                                     <div className="col-3">
-                                        <img src= "https://cdn.pixabay.com/photo/2014/11/28/08/03/brownie-548591_960_340.jpg" className="d-block w-100" alt="..." />
+                                        <img src= "https://realfood.tesco.com/media/images/1400x919-Fig-and-almond-loaf-cake-e1f67246-e81a-43e5-b4db-6654147620fa-0-1400x919.jpg" className="d-block w-100" alt="..." />
                                     </div>
                                     <div className="col-3">
                                         <img src="https://cdn.pixabay.com/photo/2014/10/13/16/11/cake-486874__340.jpg" className="d-block w-100" alt="..." />

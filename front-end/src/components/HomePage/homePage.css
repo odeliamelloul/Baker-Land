@@ -27,8 +27,12 @@
   .bakerVideo
   {
     height: 30vw;
-    width: 100vw;
     background-size:contain;
+    -webkit-border-radius: 0 0 500px 500px !important;
+    -khtml-border-radius: 0 0 500px 500px !important;
+    -moz-border-radius: 0 0 500px 500px !important;
+    -epub-border-radius: 0 0 500px 500px !important;
+    border-radius: 0 0 500px 500px !important;
   }
   .home-Products{
      

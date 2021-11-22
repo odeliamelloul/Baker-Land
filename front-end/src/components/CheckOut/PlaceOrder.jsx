@@ -21,7 +21,7 @@ const PlaceOrder = ({history,paymentMethod}) => {
             cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
           )
         
-          cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)))
+          cart.taxPrice = 0
           cart.totalPrice = (
             Number(cart.itemsPrice)-
             Number(cart.coupon)+

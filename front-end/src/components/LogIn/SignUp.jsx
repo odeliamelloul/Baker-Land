@@ -119,10 +119,7 @@ function SignUp(props)
                 email.current.value=""
                 phone.current.value=""
                 password.current.value=""
-
            }
-
-
         }
     }
 

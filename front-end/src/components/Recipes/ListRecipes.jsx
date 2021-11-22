@@ -26,7 +26,7 @@ function ListRecipes({recipesType})
 
                {             
                  allRecipes.map((item)=>
-                        <Link  to={{pathname:`/Recipe/${item.name.replaceAll(" ","-")}`}}>
+                        <Link className="link-recipe" to={{pathname:`/Recipe/${item.name.replaceAll(" ","-")}`}}>
                             <img width="300px" height="250px" src={item.image}/>
                             <h6 className="nameRecipes">{item.name}</h6>
                         </Link>

@@ -64,6 +64,7 @@
     border-radius: 15px;
     background-color: white;
     margin: 20px auto;
+    margin-left: 10px;
     height: max-content;
 }
 .btnAddIng
@@ -98,7 +99,10 @@
   color: rgb(77, 14, 45);
   font-weight: bolder;
 }
-
+.link-recipe
+{
+    height: 260px !important;
+}
 .nameRecipes
 {
     background: rgba(255,255,255,.7) !important;

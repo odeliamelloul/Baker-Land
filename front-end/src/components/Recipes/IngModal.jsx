@@ -66,7 +66,7 @@ function IngModal(props) {
 
     return (
       <div>
-      <button style={{width:"max-content"}} onClick={()=>handleShow()} className="btnRecipes openModalBtn">add ingredients to  <img src="https://img.icons8.com/fluency/32/000000/shopping-cart.png"/></button>
+      <button style={{width:"max-content"}} onClick={()=>handleShow()} className="btnRecipes openModalBtn ml-2">add ingredients to  <img src="https://img.icons8.com/fluency/32/000000/shopping-cart.png"/></button>
 
       <Modal show={show}>
             <Modal.Header closeButton onClick={()=>handleClose()} >
