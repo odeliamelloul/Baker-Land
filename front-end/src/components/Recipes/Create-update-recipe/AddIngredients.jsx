@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react'
-import { Modal, Button, Table } from "react-bootstrap";
+import React,{useState} from 'react'
+import { Modal,Table } from "react-bootstrap";
 import ingredients from '../../../ingredients';
 
 function AddIngredients ({getName,addIngredients}) {

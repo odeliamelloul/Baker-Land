@@ -12,7 +12,7 @@ function HeaderStatus() {
         for(let i=0;i<StatusArr.length;i++)
         {
 
-         if(StatusArr[i][0]===pathName || (i==3 && StatusArr[i][0]===pathName.split("/")[1]))
+         if(StatusArr[i][0]===pathName || (i===3 && StatusArr[i][0]===pathName.split("/")[1]))
          {
             for(let j=0;j<i+1;j++)
                 arr.push(j)

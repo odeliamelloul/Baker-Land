@@ -10,7 +10,6 @@ function SignIn (props)
 {
     const email = useRef();
     const Password=useRef();
-    const [message, setMsg] = useState(false)
     const dispatch = useDispatch()
  
     const userLogin=useSelector(state=>state.userLogin)

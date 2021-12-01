@@ -227,7 +227,7 @@ hr.vertical {
 
 .wrap-shipping
 {
-    width: max-content;
+    width:80vw;
     margin: 0 auto;
 }
 /* shipping */

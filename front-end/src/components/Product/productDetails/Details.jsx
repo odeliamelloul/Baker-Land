@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import "./Details.css";
 import StarAnimation from "../../StarAnimation";
-import Carousel  from "../../Carousel";
 import {useDispatch,useSelector} from 'react-redux'
 import { addToCart } from '../../../actions/cartActions';
 import {listProductDetails} from '../../../actions/productActions'
@@ -86,7 +85,7 @@ function ProductDetails (props) {
                 <img src={copiedSrc} />
               </CopyToClipboard>
             </button>
-               {shareCopied && <span className="copied">Copied!</span>}
+               {/* {shareCopied && <span className="copied">Copied!</span>} */}
             </div>
          
           <p>Price: {product.price}$</p>

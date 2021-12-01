@@ -1,7 +1,5 @@
 import React,{ useRef, useState,useEffect} from "react"
-import { findDOMNode } from "react-dom";
 import {useDispatch,useSelector} from 'react-redux'
-import { Link } from "react-router-dom";
 import {saveShippingAddress} from '../../actions/cartActions'
 import "./checkOut.css";
 

@@ -38,7 +38,7 @@ import { useSelector } from 'react-redux';
           }
 
         else{
-          if(cart.shippingPrice==-1)
+          if(cart.shippingPrice===-1)
           setErrorMsg("please choose Shipping method")  
           else setErrorMsg("please enter correct delivery adress")
         }
@@ -52,7 +52,7 @@ import { useSelector } from 'react-redux';
 
     
 
-    let SumShipping= cart.shippingPrice==-1?0:cart.shippingPrice
+    let SumShipping= cart.shippingPrice===-1?0:cart.shippingPrice
     const emptyCoupon={value:0,name:""}
     let {value,name}=coupon!==undefined? coupon :emptyCoupon
     let couponValue=Math.round(sum * value)

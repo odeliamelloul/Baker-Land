@@ -82,21 +82,7 @@ function UserProfile() {
             setErrMail("")
         }
     }
-     //password
-    // const passwordChange=()=>
-    //   {
-    //       console.log(password.current.value)
-    //     if( !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password.current.value) )
-    //     {
-
-    //         setErrPassword("Password:Minimum 8 characters, at least one letter, one number and one special character:")
-    //     }
-    //     else{
-    //         password.current.style.border="black solid 1px";
-    //         setErrPassword("")
-    //     }
-    //   }
-    //phone
+    
     const phoneChange=()=>
     {
       if(!/^[0-9]{3}\-[0-9]{7}$/.test( phone.current.value))

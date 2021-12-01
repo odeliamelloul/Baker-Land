@@ -49,7 +49,7 @@ function IngModal(props) {
       cart.cartItems.forEach((itemInCart)=>
       {
        
-        if(product._id==itemInCart.id)
+        if(product._id===itemInCart.id)
         { 
           flag=true
           dispatch(addToCart(itemInCart.id,itemInCart.qty+1))

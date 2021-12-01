@@ -81,7 +81,7 @@ useEffect(() => {
                     </div>
                     <button className="btn-check-recipe" onClick={showRecipes}> <a href='#all-matched-recipes'>Check matched Recipes</a></button>
                     {
-                        matchRecipe.length==0 && flag &&
+                        matchRecipe.length===0 && flag &&
                         <p className="err-choose-recipe">sorry not find any recipe that match your choose</p>
                     }
                    

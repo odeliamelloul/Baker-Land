@@ -33,7 +33,7 @@ function Header(props)
 
     const handleShowModalSmallCart = () => {
       setShowSmallCart(true)
-       classLogIn=="d-none" && setClassModal("d-block")
+       classLogIn==="d-none" && setClassModal("d-block")
     }
 
     const handleCloseModalSmallCart = () => {

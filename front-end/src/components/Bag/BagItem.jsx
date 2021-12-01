@@ -61,7 +61,7 @@ const dispatch = useDispatch()
                   <div className="amount">{amount}</div>
                  <button className="minus" onClick={removeProdct}>-</button>
                 </p>
-                  <p>{product.price*amount}$</p> 
+                  <p>{(product.price*amount).toFixed(2)}$</p> 
                <button className="remove-product-btn" onClick={()=>{dispatch(removeFromCart(product.id))}}><img src="https://img.icons8.com/external-icongeek26-outline-gradient-icongeek26/32/000000/external-bin-city-life-icongeek26-outline-gradient-icongeek26.png"/></button>
                 <div >
                 {/* <button onClick={changeSrc}>

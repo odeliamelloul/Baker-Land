@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import CarouselCart from "./CarouselCart";
@@ -8,20 +8,9 @@ import PlaceOrder from "./PlaceOrder";
 
 const PaymentMethod = ({history}) => {
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
-  const dispatch = useDispatch();
 
   const cart=useSelector(state=>state.cart)
-  const {shippingAddress}=cart
-  
 
-
-  const submitForm = (e) => {
-    e.preventDefault();
-    
-  };
-  
-  const coupon=cart.coupon?cart.coupon:0
-  const cartItemsPrice=cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   return (
     <>
     <HeaderStatus/>

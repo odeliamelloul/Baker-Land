@@ -76,7 +76,7 @@
   border: none;
   background-color: transparent;
   width: 25px;
-  margin: 0 !important;
+  margin: 20px !important;
 }
 
 .DetailsItem>*:not(.btn)
